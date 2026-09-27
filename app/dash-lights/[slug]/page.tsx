@@ -11,6 +11,12 @@ const severityClass: Record<string, string> = {
   info: 'bg-zinc-500/15 text-zinc-300',
 }
 
+function svgSrc(svg?: string) {
+  if (!svg) return undefined
+  if (svg.startsWith('http') || svg.startsWith('/')) return svg
+  return `/${svg}`
+}
+
 export async function generateStaticParams() {
   const icons = await getDashboardIcons()
   return icons.map((i) => ({ slug: i.id }))
@@ -23,7 +29,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${icon.name} Dashboard Warning Light`,
     description: icon.definition.slice(0, 160),
-    alternates: { canonical: `/dash-lights/${icon.id}` },
+    alternates: {
+      canonical: icon.canonical ?? `/dash-lights/${icon.id}`,
+    },
   }
 }
 
@@ -42,6 +50,8 @@ export default async function DashLightDetailPage({ params }: Props) {
     )
   }
 
+  const src = svgSrc(icon.svg)
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <nav className="mb-6 text-sm text-zinc-500">
@@ -56,14 +66,10 @@ export default async function DashLightDetailPage({ params }: Props) {
           role="img"
           aria-label={`${icon.name} dashboard warning light`}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={icon.svg?.startsWith('/') ? icon.svg : `/${icon.svg ?? ''}`}
-            alt=""
-            width={56}
-            height={56}
-            className="h-14 w-14"
-          />
+          {src ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={src} alt="" width={56} height={56} className="h-14 w-14" />
+          ) : null}
         </div>
         <div>
           <div className="mb-2 flex flex-wrap gap-2">
@@ -116,10 +122,10 @@ export default async function DashLightDetailPage({ params }: Props) {
             {icon.relatedObdCodes.map((c) => (
               <li key={c}>
                 <Link
-                  href={`/codes/${c}`}
+                  href={`/codes/${c.toUpperCase()}`}
                   className="rounded-md bg-zinc-900 px-2 py-1 font-mono text-sm text-orange-400 hover:bg-zinc-800"
                 >
-                  {c}
+                  {c.toUpperCase()}
                 </Link>
               </li>
             ))}

@@ -11,12 +11,10 @@ export const metadata: Metadata = {
 
 const severityOrder = { critical: 0, warning: 1, info: 2 } as const
 
-const colorClass: Record<string, string> = {
-  red: 'text-red-400',
-  amber: 'text-amber-400',
-  green: 'text-emerald-400',
-  blue: 'text-blue-400',
-  white: 'text-zinc-200',
+function svgSrc(svg?: string) {
+  if (!svg) return undefined
+  if (svg.startsWith('http') || svg.startsWith('/')) return svg
+  return `/${svg}`
 }
 
 export default async function DashLightsGalleryPage() {
@@ -40,35 +38,42 @@ export default async function DashLightsGalleryPage() {
       {icons.length === 0 ? (
         <p className="rounded-xl border border-zinc-800 bg-zinc-950 p-4 text-sm text-zinc-400">
           Icon data not built yet. Run{' '}
-          <code className="text-orange-300">npm run generate:icons</code> and
-          Velite, then refresh.
+          <code className="text-orange-300">npm run generate:icons</code> then{' '}
+          <code className="text-orange-300">npm run dev</code> (Velite runs via
+          Next config).
         </p>
       ) : (
         <ul className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5">
-          {icons.map((icon) => (
-            <li key={icon.id}>
-              <Link
-                href={`/dash-lights/${icon.id}`}
-                className="flex flex-col items-center gap-2 rounded-xl border border-zinc-800 p-3 transition hover:border-zinc-600 hover:bg-zinc-900"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={icon.svg?.startsWith('/') ? icon.svg : `/${icon.svg ?? ''}`}
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={`h-10 w-10 ${colorClass[icon.color] ?? ''}`}
-                  aria-hidden
-                />
-                <span className="line-clamp-2 text-center text-xs font-medium text-zinc-300">
-                  {icon.name}
-                </span>
-                <span className="sr-only">
-                  {icon.severity} {icon.color} — {icon.definition}
-                </span>
-              </Link>
-            </li>
-          ))}
+          {icons.map((icon) => {
+            const src = svgSrc(icon.svg)
+            return (
+              <li key={icon.id}>
+                <Link
+                  href={icon.permalink ?? `/dash-lights/${icon.id}`}
+                  className="flex flex-col items-center gap-2 rounded-xl border border-zinc-800 p-3 transition hover:border-zinc-600 hover:bg-zinc-900"
+                >
+                  {src ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={src}
+                      alt=""
+                      width={40}
+                      height={40}
+                      className="h-10 w-10"
+                      aria-hidden
+                    />
+                  ) : (
+                    <span className="flex h-10 w-10 items-center justify-center rounded bg-zinc-900 text-[10px] text-zinc-500">
+                      {icon.id.slice(0, 3)}
+                    </span>
+                  )}
+                  <span className="line-clamp-2 text-center text-xs font-medium text-zinc-300">
+                    {icon.name}
+                  </span>
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       )}
     </div>

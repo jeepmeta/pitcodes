@@ -1,10 +1,11 @@
 /**
- * Safe accessors for Velite output.
- * Returns empty arrays when `.velite` is not built yet so the app still boots.
+ * Safe accessors for Velite output (`.velite`).
+ * Empty arrays when content is not built yet so routes still boot.
  */
 
 export type DashboardIcon = {
   id: string
+  slug?: string
   name: string
   aliases: string[]
   vehicleSpecific: boolean
@@ -16,7 +17,10 @@ export type DashboardIcon = {
   solutions: string[]
   relatedProducts: string[]
   relatedObdCodes: string[]
+  /** Public URL after Velite `s.file()` (e.g. /static/…) */
   svg?: string
+  permalink?: string
+  canonical?: string
 }
 
 export type DiagnosticCode = {
@@ -31,33 +35,40 @@ export type DiagnosticCode = {
   solutions: string[]
   estimatedCost?: { min: number; max: number; currency: string }
   commonVehicles?: string[]
+  relatedCodes?: string[]
+  keywords?: string[]
   permalink?: string
   canonical?: string
 }
 
-export async function getDashboardIcons(): Promise<DashboardIcon[]> {
+type SiteModule = {
+  dashboardIcons?: DashboardIcon[]
+  codes?: DiagnosticCode[]
+}
+
+async function loadSite(): Promise<SiteModule> {
   try {
-    const mod = await import('#site/content')
-    return (mod as { dashboardIcons?: DashboardIcon[] }).dashboardIcons ?? []
+    return (await import('#site/content')) as SiteModule
   } catch {
-    return []
+    return {}
   }
+}
+
+export async function getDashboardIcons(): Promise<DashboardIcon[]> {
+  const mod = await loadSite()
+  return mod.dashboardIcons ?? []
 }
 
 export async function getDashboardIcon(
   slug: string
 ): Promise<DashboardIcon | undefined> {
   const icons = await getDashboardIcons()
-  return icons.find((i) => i.id === slug)
+  return icons.find((i) => i.id === slug || i.slug === slug)
 }
 
 export async function getCodes(): Promise<DiagnosticCode[]> {
-  try {
-    const mod = await import('#site/content')
-    return (mod as { codes?: DiagnosticCode[] }).codes ?? []
-  } catch {
-    return []
-  }
+  const mod = await loadSite()
+  return mod.codes ?? []
 }
 
 export async function getCode(
