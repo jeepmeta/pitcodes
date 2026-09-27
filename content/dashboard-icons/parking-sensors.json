@@ -1,0 +1,28 @@
+{
+  "id": "parking-sensors",
+  "name": "Parking Sensors / Park Assist",
+  "aliases": [
+    "pdc",
+    "park-distance-control"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "adas",
+  "definition": "Parking sensors detected an obstacle or system is active/faulted.",
+  "causes": [
+    "Obstacle near bumper",
+    "Sensor dirty/iced",
+    "System fault"
+  ],
+  "solutions": [
+    "Check surroundings",
+    "Clean sensors",
+    "Disable if false alarms persist in open area"
+  ],
+  "relatedProducts": [
+    "Sensor cleaner"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/parking-sensors.svg"
+}

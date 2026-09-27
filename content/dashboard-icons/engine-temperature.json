@@ -1,0 +1,42 @@
+{
+  "id": "engine-temperature",
+  "name": "Engine Temperature",
+  "aliases": [
+    "coolant-temp",
+    "overheating"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "critical",
+  "category": "engine",
+  "definition": "Engine coolant temperature is too high. Continued driving can cause severe engine damage.",
+  "causes": [
+    "Low coolant level",
+    "Faulty thermostat",
+    "Water pump failure",
+    "Radiator blockage",
+    "Cooling fan failure",
+    "Head gasket leak"
+  ],
+  "solutions": [
+    "Stop safely and turn off engine",
+    "Allow engine to cool completely",
+    "Check coolant level when cold",
+    "Inspect for leaks",
+    "Tow if overheating persists"
+  ],
+  "relatedProducts": [
+    "Coolant",
+    "Thermostat",
+    "Radiator cap",
+    "Water pump"
+  ],
+  "relatedObdCodes": [
+    "P0115",
+    "P0116",
+    "P0117",
+    "P0118",
+    "P0128"
+  ],
+  "svg": "svg/engine-temperature.svg"
+}

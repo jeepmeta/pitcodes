@@ -1,0 +1,35 @@
+{
+  "id": "air-suspension",
+  "name": "Air Suspension",
+  "aliases": [
+    "air-ride",
+    "height-control"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "suspension",
+  "definition": "Air suspension system fault or height adjustment in progress.",
+  "causes": [
+    "Air leak",
+    "Compressor failure",
+    "Height sensor fault",
+    "Low battery affecting compressor"
+  ],
+  "solutions": [
+    "Scan suspension codes",
+    "Listen for compressor running",
+    "Check for air line leaks",
+    "Professional diagnosis"
+  ],
+  "relatedProducts": [
+    "Air spring",
+    "Compressor",
+    "Height sensor"
+  ],
+  "relatedObdCodes": [
+    "C1725",
+    "C1726"
+  ],
+  "svg": "svg/air-suspension.svg"
+}

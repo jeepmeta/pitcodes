@@ -1,0 +1,26 @@
+{
+  "id": "blind-spot",
+  "name": "Blind Spot Monitor",
+  "aliases": [
+    "bsm",
+    "blind-spot-warning"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "adas",
+  "definition": "Vehicle detected in blind spot or system has a fault.",
+  "causes": [
+    "Vehicle in adjacent lane blind zone",
+    "Sensor blocked by dirt/ice",
+    "System fault"
+  ],
+  "solutions": [
+    "Check mirrors and glance over shoulder",
+    "Clean rear bumper sensors",
+    "Scan if light stays on"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/blind-spot.svg"
+}

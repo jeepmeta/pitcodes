@@ -1,0 +1,35 @@
+{
+  "id": "security",
+  "name": "Security / Immobilizer",
+  "aliases": [
+    "anti-theft",
+    "immobilizer",
+    "key"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "warning",
+  "category": "security",
+  "definition": "Immobilizer/security system is active or has a key recognition fault.",
+  "causes": [
+    "Wrong key / unprogrammed key",
+    "Key battery dead (smart key)",
+    "Immobilizer antenna fault",
+    "Security system armed"
+  ],
+  "solutions": [
+    "Try spare key",
+    "Replace key fob battery",
+    "Hold key closer to start button",
+    "Dealer reprogramming if needed"
+  ],
+  "relatedProducts": [
+    "Key fob battery",
+    "Replacement key"
+  ],
+  "relatedObdCodes": [
+    "B1600",
+    "B1601"
+  ],
+  "svg": "svg/security.svg"
+}

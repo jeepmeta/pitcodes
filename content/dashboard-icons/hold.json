@@ -1,0 +1,23 @@
+{
+  "id": "hold",
+  "name": "Auto Hold / Brake Hold",
+  "aliases": [
+    "auto-hold",
+    "brake-hold"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "brakes",
+  "definition": "Auto hold is active — brakes remain applied after releasing pedal until acceleration.",
+  "causes": [
+    "Driver activated Auto Hold"
+  ],
+  "solutions": [
+    "Useful in stop-and-go traffic",
+    "Deactivate for parking maneuvers if preferred"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/hold.svg"
+}

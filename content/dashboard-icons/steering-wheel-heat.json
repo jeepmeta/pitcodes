@@ -1,0 +1,21 @@
+{
+  "id": "steering-wheel-heat",
+  "name": "Heated Steering Wheel",
+  "aliases": [
+    "wheel-heat"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "climate",
+  "definition": "Steering wheel heater is active.",
+  "causes": [
+    "Steering wheel heat button pressed"
+  ],
+  "solutions": [
+    "Normal operation"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/steering-wheel-heat.svg"
+}

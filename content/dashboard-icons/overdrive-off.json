@@ -1,0 +1,24 @@
+{
+  "id": "overdrive-off",
+  "name": "Overdrive Off",
+  "aliases": [
+    "o/d-off",
+    "od-off"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "transmission",
+  "definition": "Overdrive gear is locked out. Transmission will not shift into highest gear.",
+  "causes": [
+    "Driver pressed O/D off button",
+    "Towing mode active"
+  ],
+  "solutions": [
+    "Press O/D button again to re-enable",
+    "Useful for engine braking on descents"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/overdrive-off.svg"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "passenger-airbag-off",
+  "name": "Passenger Airbag Off",
+  "aliases": [
+    "side-airbag-off",
+    "airbag-off"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "safety",
+  "definition": "Passenger airbag is intentionally deactivated (child seat detected or switch set to OFF).",
+  "causes": [
+    "Child seat / occupancy sensor",
+    "Manual passenger airbag switch",
+    "Lightweight passenger"
+  ],
+  "solutions": [
+    "Normal when child seat is present",
+    "Verify switch position if no child seat",
+    "Have occupancy sensor checked if incorrect"
+  ],
+  "relatedProducts": [
+    "Occupancy sensor mat"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/passenger-airbag-off.svg"
+}

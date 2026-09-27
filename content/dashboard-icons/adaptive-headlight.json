@@ -1,0 +1,25 @@
+{
+  "id": "adaptive-headlight",
+  "name": "Adaptive Headlights",
+  "aliases": [
+    "afs",
+    "cornering-lights"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "lighting",
+  "definition": "Adaptive / cornering headlight system is active or has a fault.",
+  "causes": [
+    "System active while steering",
+    "Leveling sensor fault",
+    "AFS module issue"
+  ],
+  "solutions": [
+    "Normal when steering at night",
+    "Scan if warning light present"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/adaptive-headlight.svg"
+}

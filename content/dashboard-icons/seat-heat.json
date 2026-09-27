@@ -1,0 +1,22 @@
+{
+  "id": "seat-heat",
+  "name": "Seat Heater",
+  "aliases": [
+    "heated-seat"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "climate",
+  "definition": "Seat heating element is active (level indicated by bars on some vehicles).",
+  "causes": [
+    "Seat heat button pressed"
+  ],
+  "solutions": [
+    "Normal operation",
+    "Turn off when not needed to save energy"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/seat-heat.svg"
+}

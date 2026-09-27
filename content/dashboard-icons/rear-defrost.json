@@ -1,0 +1,21 @@
+{
+  "id": "rear-defrost",
+  "name": "Rear Window Defrost",
+  "aliases": [
+    "rear-defogger"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "climate",
+  "definition": "Rear window defroster grid is active.",
+  "causes": [
+    "Rear defrost button pressed"
+  ],
+  "solutions": [
+    "Auto-cancels after timed interval on most vehicles"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/rear-defrost.svg"
+}

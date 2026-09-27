@@ -1,0 +1,23 @@
+{
+  "id": "lane-departure-off",
+  "name": "Lane Departure Warning Off",
+  "aliases": [
+    "ldw-off"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "adas",
+  "definition": "Lane departure warning has been disabled.",
+  "causes": [
+    "Driver turned system off",
+    "System unavailable (camera blocked)"
+  ],
+  "solutions": [
+    "Re-enable via button or menu",
+    "Clean windshield camera area"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/lane-departure-off.svg"
+}

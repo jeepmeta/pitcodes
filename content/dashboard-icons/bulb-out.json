@@ -1,0 +1,30 @@
+{
+  "id": "bulb-out",
+  "name": "Bulb Failure",
+  "aliases": [
+    "lamp-out",
+    "exterior-lamp-failure"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "lighting",
+  "definition": "One or more exterior bulbs has failed.",
+  "causes": [
+    "Burned-out bulb",
+    "Broken filament",
+    "Corroded socket",
+    "LED module failure"
+  ],
+  "solutions": [
+    "Identify which bulb via walk-around",
+    "Replace with correct type",
+    "Clean socket contacts"
+  ],
+  "relatedProducts": [
+    "Replacement bulbs",
+    "Dielectric grease"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/bulb-out.svg"
+}

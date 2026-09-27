@@ -1,0 +1,39 @@
+{
+  "id": "transmission-fault",
+  "name": "Transmission Fault",
+  "aliases": [
+    "at-check",
+    "transmission-warning"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "transmission",
+  "definition": "Transmission control module has detected a fault. Limp mode may be active.",
+  "causes": [
+    "Solenoid failure",
+    "Sensor fault",
+    "Low fluid",
+    "Mechatronic issues",
+    "Wiring problems"
+  ],
+  "solutions": [
+    "Scan TCM codes",
+    "Check fluid level and condition",
+    "Avoid hard acceleration",
+    "Professional diagnosis"
+  ],
+  "relatedProducts": [
+    "ATF fluid",
+    "Transmission solenoid",
+    "OBD scanner"
+  ],
+  "relatedObdCodes": [
+    "P0700",
+    "P0715",
+    "P0720",
+    "P0730",
+    "P0740"
+  ],
+  "svg": "svg/transmission-fault.svg"
+}

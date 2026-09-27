@@ -1,0 +1,24 @@
+{
+  "id": "high-beam",
+  "name": "High Beam",
+  "aliases": [
+    "main-beam",
+    "brights"
+  ],
+  "vehicleSpecific": false,
+  "color": "blue",
+  "severity": "info",
+  "category": "lighting",
+  "definition": "High-beam headlights are on. Dim for oncoming traffic.",
+  "causes": [
+    "High-beam stalk activated"
+  ],
+  "solutions": [
+    "Switch to low beam when traffic approaches"
+  ],
+  "relatedProducts": [
+    "Headlight bulbs"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/high-beam.svg"
+}

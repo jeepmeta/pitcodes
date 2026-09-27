@@ -1,0 +1,25 @@
+{
+  "id": "rear-diff-lock",
+  "name": "Rear Differential Lock",
+  "aliases": [
+    "r-diff-lock",
+    "locker"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Rear differential locker is engaged — both rear wheels turn at same speed.",
+  "causes": [
+    "Driver activated rear locker"
+  ],
+  "solutions": [
+    "Use only off-road at low speed",
+    "Disengage on high-traction surfaces"
+  ],
+  "relatedProducts": [
+    "Differential oil"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/rear-diff-lock.svg"
+}

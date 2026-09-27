@@ -1,0 +1,22 @@
+{
+  "id": "hazard-lights",
+  "name": "Hazard Lights",
+  "aliases": [
+    "emergency-flashers"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "info",
+  "category": "lighting",
+  "definition": "Hazard / emergency flashers are active.",
+  "causes": [
+    "Hazard button pressed"
+  ],
+  "solutions": [
+    "Use when stopped in traffic or emergency",
+    "Turn off when underway if safe"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/hazard-lights.svg"
+}

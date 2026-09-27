@@ -1,0 +1,38 @@
+{
+  "id": "brake-warning",
+  "name": "Brake System Warning",
+  "aliases": [
+    "brake",
+    "parking-brake"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "critical",
+  "category": "brakes",
+  "definition": "Brake system fault or parking brake is engaged. May indicate low brake fluid or hydraulic failure.",
+  "causes": [
+    "Parking brake engaged",
+    "Low brake fluid",
+    "Brake fluid leak",
+    "ABS module fault",
+    "Worn brake pads (some vehicles)"
+  ],
+  "solutions": [
+    "Release parking brake",
+    "Check brake fluid level",
+    "Inspect for leaks",
+    "Do not drive if fluid is low or pedal feels soft",
+    "Bleed brakes if needed"
+  ],
+  "relatedProducts": [
+    "Brake fluid",
+    "Brake pads",
+    "Brake lines"
+  ],
+  "relatedObdCodes": [
+    "C0035",
+    "C0040",
+    "C0045"
+  ],
+  "svg": "svg/brake-warning.svg"
+}

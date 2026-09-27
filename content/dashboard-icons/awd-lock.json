@@ -1,0 +1,24 @@
+{
+  "id": "awd-lock",
+  "name": "AWD Lock",
+  "aliases": [
+    "awd-locked",
+    "center-diff-lock"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Center differential or AWD clutch is locked for maximum traction.",
+  "causes": [
+    "Driver activated lock mode",
+    "Automatic lock in low-traction"
+  ],
+  "solutions": [
+    "Use only on loose/slippery surfaces",
+    "Unlock for paved roads to avoid driveline bind"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/awd-lock.svg"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "traction-control",
+  "name": "Traction Control",
+  "aliases": [
+    "tcs",
+    "asr",
+    "trac"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Traction control is active (flashing) or disabled/faulted (steady).",
+  "causes": [
+    "Wheel slip detected",
+    "TCS manually disabled",
+    "Wheel speed sensor fault",
+    "ABS module issue"
+  ],
+  "solutions": [
+    "If flashing while accelerating: normal intervention",
+    "If steady: check if TCS was turned off",
+    "Scan for ABS/TCS codes if unexpected"
+  ],
+  "relatedProducts": [
+    "Wheel speed sensor",
+    "Tires"
+  ],
+  "relatedObdCodes": [
+    "C0035",
+    "C0040"
+  ],
+  "svg": "svg/traction-control.svg"
+}

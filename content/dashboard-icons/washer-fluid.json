@@ -1,0 +1,26 @@
+{
+  "id": "washer-fluid",
+  "name": "Low Washer Fluid",
+  "aliases": [
+    "washer-level"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "maintenance",
+  "definition": "Windshield washer fluid reservoir is low.",
+  "causes": [
+    "Fluid used up",
+    "Leak in reservoir or lines"
+  ],
+  "solutions": [
+    "Refill with washer fluid (not water in freezing climates)",
+    "Inspect for leaks"
+  ],
+  "relatedProducts": [
+    "Washer fluid",
+    "Washer fluid concentrate"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/washer-fluid.svg"
+}

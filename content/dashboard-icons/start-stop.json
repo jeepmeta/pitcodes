@@ -1,0 +1,26 @@
+{
+  "id": "start-stop",
+  "name": "Auto Start-Stop",
+  "aliases": [
+    "engine-stop-start",
+    "iss"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "engine",
+  "definition": "Auto start-stop system is active — engine may stop at idle and restart automatically.",
+  "causes": [
+    "System enabled and conditions met (brake held, battery SOC, temp, etc.)"
+  ],
+  "solutions": [
+    "Normal operation",
+    "Press A button to disable if desired",
+    "Engine restarts on brake release or clutch"
+  ],
+  "relatedProducts": [
+    "AGM battery"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/start-stop.svg"
+}

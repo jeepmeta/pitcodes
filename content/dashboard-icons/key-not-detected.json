@@ -1,0 +1,28 @@
+{
+  "id": "key-not-detected",
+  "name": "Key Not Detected",
+  "aliases": [
+    "no-key",
+    "key-out-of-range"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "security",
+  "definition": "Smart key is not detected inside the vehicle.",
+  "causes": [
+    "Key left outside",
+    "Dead key fob battery",
+    "RF interference"
+  ],
+  "solutions": [
+    "Bring key inside",
+    "Replace fob battery",
+    "Hold fob against start button as backup"
+  ],
+  "relatedProducts": [
+    "CR2032 battery"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/key-not-detected.svg"
+}

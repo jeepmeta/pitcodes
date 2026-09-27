@@ -1,0 +1,24 @@
+{
+  "id": "4x2",
+  "name": "2WD / 4x2",
+  "aliases": [
+    "2wd",
+    "rwd",
+    "fwd"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Two-wheel drive mode is active (rear- or front-wheel drive only).",
+  "causes": [
+    "Driver selected 2H / 4x2"
+  ],
+  "solutions": [
+    "Normal on-road mode",
+    "Best fuel economy"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/4x2.svg"
+}

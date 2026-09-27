@@ -1,0 +1,40 @@
+{
+  "id": "tpms",
+  "name": "Tire Pressure Monitoring System",
+  "aliases": [
+    "low-tire-pressure",
+    "tpms-warning"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "tires",
+  "definition": "One or more tires is significantly under-inflated, or TPMS system has a fault.",
+  "causes": [
+    "Under-inflated tire",
+    "Punctured tire",
+    "Temperature drop",
+    "TPMS sensor battery dead",
+    "Sensor damage after tire service"
+  ],
+  "solutions": [
+    "Check all tire pressures including spare",
+    "Inflate to door-jamb placard PSI",
+    "Inspect for punctures",
+    "Reset TPMS if required after inflation",
+    "Replace dead sensors"
+  ],
+  "relatedProducts": [
+    "Tire inflator",
+    "TPMS sensor",
+    "Tire repair kit",
+    "Portable air compressor"
+  ],
+  "relatedObdCodes": [
+    "C1501",
+    "C1502",
+    "C1503",
+    "C1504"
+  ],
+  "svg": "svg/tpms.svg"
+}

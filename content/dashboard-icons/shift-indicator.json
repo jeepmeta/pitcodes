@@ -1,0 +1,22 @@
+{
+  "id": "shift-indicator",
+  "name": "Shift Indicator / Gear Position",
+  "aliases": [
+    "prndl",
+    "gear-position"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "transmission",
+  "definition": "Shows current transmission gear position (P R N D etc.).",
+  "causes": [
+    "Normal gear selection"
+  ],
+  "solutions": [
+    "Informational only"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/shift-indicator.svg"
+}

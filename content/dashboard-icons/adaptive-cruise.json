@@ -1,0 +1,23 @@
+{
+  "id": "adaptive-cruise",
+  "name": "Adaptive Cruise Control",
+  "aliases": [
+    "acc",
+    "radar-cruise"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "adas",
+  "definition": "Adaptive cruise control is active — maintains speed and following distance.",
+  "causes": [
+    "ACC activated and set"
+  ],
+  "solutions": [
+    "Monitor traffic — ACC is assist only",
+    "Take over in complex situations"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/adaptive-cruise.svg"
+}

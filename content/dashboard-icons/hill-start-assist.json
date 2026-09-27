@@ -1,0 +1,22 @@
+{
+  "id": "hill-start-assist",
+  "name": "Hill Start Assist",
+  "aliases": [
+    "hsa",
+    "hill-hold"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "brakes",
+  "definition": "Hill start assist is holding the vehicle briefly after releasing the brake on an incline.",
+  "causes": [
+    "Automatic when stopped on incline"
+  ],
+  "solutions": [
+    "Normal — gives time to move foot to accelerator"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/hill-start-assist.svg"
+}

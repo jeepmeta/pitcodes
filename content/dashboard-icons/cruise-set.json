@@ -1,0 +1,21 @@
+{
+  "id": "cruise-set",
+  "name": "Cruise Control Set",
+  "aliases": [
+    "set-cruise"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "adas",
+  "definition": "Cruise control speed has been set.",
+  "causes": [
+    "SET button pressed"
+  ],
+  "solutions": [
+    "Informational"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/cruise-set.svg"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "water-in-fuel",
+  "name": "Water in Fuel",
+  "aliases": [
+    "fuel-water-separator"
+  ],
+  "vehicleSpecific": true,
+  "color": "amber",
+  "severity": "warning",
+  "category": "fuel",
+  "definition": "Water has been detected in the fuel filter / water separator.",
+  "causes": [
+    "Contaminated diesel fuel",
+    "Condensation in tank"
+  ],
+  "solutions": [
+    "Drain water separator per owner manual",
+    "Replace fuel filter if needed",
+    "Source better quality fuel"
+  ],
+  "relatedProducts": [
+    "Fuel filter",
+    "Water separator"
+  ],
+  "relatedObdCodes": [
+    "P2269"
+  ],
+  "svg": "svg/water-in-fuel.svg"
+}

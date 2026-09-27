@@ -1,0 +1,25 @@
+{
+  "id": "charging",
+  "name": "EV Charging",
+  "aliases": [
+    "plug-in-charging"
+  ],
+  "vehicleSpecific": true,
+  "color": "green",
+  "severity": "info",
+  "category": "hybrid",
+  "definition": "Vehicle is connected and charging.",
+  "causes": [
+    "EVSE plugged in and charging session active"
+  ],
+  "solutions": [
+    "Informational — charging in progress"
+  ],
+  "relatedProducts": [
+    "EVSE",
+    "J1772 cable",
+    "CCS cable"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/charging.svg"
+}

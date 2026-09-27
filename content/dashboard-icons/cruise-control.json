@@ -1,0 +1,22 @@
+{
+  "id": "cruise-control",
+  "name": "Cruise Control",
+  "aliases": [
+    "cruise",
+    "speed-control"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "adas",
+  "definition": "Cruise control is active and maintaining set speed.",
+  "causes": [
+    "Driver activated cruise and set speed"
+  ],
+  "solutions": [
+    "Cancel with brake, cancel button, or clutch"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/cruise-control.svg"
+}

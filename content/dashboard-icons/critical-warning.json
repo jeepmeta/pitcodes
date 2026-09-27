@@ -1,0 +1,24 @@
+{
+  "id": "critical-warning",
+  "name": "Critical Warning",
+  "aliases": [
+    "stop-warning",
+    "red-triangle"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "critical",
+  "category": "system",
+  "definition": "Critical system warning — stop safely as soon as possible.",
+  "causes": [
+    "Serious fault requiring immediate attention"
+  ],
+  "solutions": [
+    "Stop when safe",
+    "Read message",
+    "Do not continue driving if advised"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/critical-warning.svg"
+}

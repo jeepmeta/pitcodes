@@ -1,0 +1,25 @@
+{
+  "id": "trailer",
+  "name": "Trailer Connected",
+  "aliases": [
+    "trailer-indicator"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "body",
+  "definition": "Trailer is detected / trailer lighting circuit is active.",
+  "causes": [
+    "Trailer plugged in"
+  ],
+  "solutions": [
+    "Verify all trailer lights function",
+    "Check connector for corrosion"
+  ],
+  "relatedProducts": [
+    "Trailer adapter",
+    "Trailer light tester"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/trailer.svg"
+}

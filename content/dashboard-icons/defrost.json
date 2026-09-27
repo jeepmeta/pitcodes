@@ -1,0 +1,21 @@
+{
+  "id": "defrost",
+  "name": "Defrost / Defog",
+  "aliases": [
+    "windscreen-defrost"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "climate",
+  "definition": "Windshield defrost mode is active.",
+  "causes": [
+    "Defrost button pressed"
+  ],
+  "solutions": [
+    "Normal operation for clearing fog/ice"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/defrost.svg"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "trunk-ajar",
+  "name": "Trunk / Hatch Ajar",
+  "aliases": [
+    "boot-open",
+    "liftgate-open"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "info",
+  "category": "body",
+  "definition": "Trunk, hatch, or liftgate is open or ajar.",
+  "causes": [
+    "Trunk not closed",
+    "Faulty trunk switch"
+  ],
+  "solutions": [
+    "Close trunk firmly",
+    "Check latch mechanism"
+  ],
+  "relatedProducts": [
+    "Trunk latch"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/trunk-ajar.svg"
+}

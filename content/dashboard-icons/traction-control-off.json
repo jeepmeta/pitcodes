@@ -1,0 +1,27 @@
+{
+  "id": "traction-control-off",
+  "name": "Traction Control Off",
+  "aliases": [
+    "tcs-off",
+    "trac-off",
+    "vsc-off",
+    "dsc-off",
+    "esp-off"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Traction/stability control has been manually disabled by the driver.",
+  "causes": [
+    "Driver pressed TCS/ESP off button",
+    "System fault forcing disable"
+  ],
+  "solutions": [
+    "Press button again to re-enable",
+    "If it will not re-enable, scan for faults"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/traction-control-off.svg"
+}

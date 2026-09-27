@@ -1,0 +1,32 @@
+{
+  "id": "oil-change",
+  "name": "Oil Change / Maintenance Required",
+  "aliases": [
+    "maint-reqd",
+    "oil-life",
+    "service-due"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "maintenance",
+  "definition": "Scheduled maintenance or oil life interval has been reached. Service is recommended.",
+  "causes": [
+    "Oil life monitor expired",
+    "Mileage-based service interval",
+    "Time-based service interval"
+  ],
+  "solutions": [
+    "Schedule oil change and multi-point inspection",
+    "Reset oil life monitor after service",
+    "Follow manufacturer maintenance schedule"
+  ],
+  "relatedProducts": [
+    "Engine oil",
+    "Oil filter",
+    "Air filter",
+    "Cabin filter"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/oil-change.svg"
+}

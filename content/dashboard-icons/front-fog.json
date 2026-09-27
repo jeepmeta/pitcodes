@@ -1,0 +1,24 @@
+{
+  "id": "front-fog",
+  "name": "Front Fog Lights",
+  "aliases": [
+    "fog-lamps"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "lighting",
+  "definition": "Front fog lights are illuminated.",
+  "causes": [
+    "Fog light switch on"
+  ],
+  "solutions": [
+    "Use only in fog/poor visibility",
+    "Turn off in clear conditions (illegal in some regions)"
+  ],
+  "relatedProducts": [
+    "Fog light bulbs"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/front-fog.svg"
+}

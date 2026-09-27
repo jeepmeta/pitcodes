@@ -1,0 +1,34 @@
+{
+  "id": "gas-cap",
+  "name": "Check Gas Cap",
+  "aliases": [
+    "loose-fuel-cap",
+    "evap"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "fuel",
+  "definition": "Fuel cap is loose, missing, or EVAP system has detected a leak.",
+  "causes": [
+    "Loose or missing gas cap",
+    "Damaged cap seal",
+    "EVAP system leak"
+  ],
+  "solutions": [
+    "Tighten gas cap until it clicks",
+    "Replace damaged cap",
+    "Clear code after fixing — may take several drive cycles"
+  ],
+  "relatedProducts": [
+    "Gas cap",
+    "EVAP purge valve"
+  ],
+  "relatedObdCodes": [
+    "P0455",
+    "P0456",
+    "P0457",
+    "P0442"
+  ],
+  "svg": "svg/gas-cap.svg"
+}

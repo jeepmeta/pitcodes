@@ -1,0 +1,27 @@
+{
+  "id": "parking-brake",
+  "name": "Parking Brake Engaged",
+  "aliases": [
+    "handbrake",
+    "e-brake"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "info",
+  "category": "brakes",
+  "definition": "Parking brake is currently applied.",
+  "causes": [
+    "Parking brake lever/pedal engaged",
+    "Electronic parking brake activated"
+  ],
+  "solutions": [
+    "Release parking brake before driving",
+    "If light stays on after release, check switch or EPB system"
+  ],
+  "relatedProducts": [
+    "Parking brake cable",
+    "EPB actuator"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/parking-brake.svg"
+}

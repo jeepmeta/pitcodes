@@ -1,0 +1,38 @@
+{
+  "id": "transmission-temp",
+  "name": "Transmission Temperature",
+  "aliases": [
+    "at-oil-temp",
+    "trans-temp"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "critical",
+  "category": "transmission",
+  "definition": "Automatic transmission fluid temperature is excessively high.",
+  "causes": [
+    "Towing beyond rating",
+    "Low ATF level",
+    "Blocked cooler",
+    "Worn clutches generating heat",
+    "Extended mountain driving"
+  ],
+  "solutions": [
+    "Pull over and idle to cool",
+    "Check ATF level when warm",
+    "Reduce load",
+    "Service transmission cooler",
+    "Avoid further towing until resolved"
+  ],
+  "relatedProducts": [
+    "ATF fluid",
+    "Transmission cooler",
+    "Transmission filter"
+  ],
+  "relatedObdCodes": [
+    "P0711",
+    "P0712",
+    "P0713"
+  ],
+  "svg": "svg/transmission-temp.svg"
+}

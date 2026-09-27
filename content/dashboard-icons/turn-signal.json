@@ -1,0 +1,27 @@
+{
+  "id": "turn-signal",
+  "name": "Turn Signal",
+  "aliases": [
+    "indicator",
+    "blinker"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "lighting",
+  "definition": "Left or right turn signal is active. Rapid flashing indicates a bulb is out.",
+  "causes": [
+    "Turn stalk activated",
+    "Hazard lights on"
+  ],
+  "solutions": [
+    "Cancel after turn",
+    "Replace bulb if flashing fast"
+  ],
+  "relatedProducts": [
+    "Turn signal bulbs",
+    "LED turn signal kit"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/turn-signal.svg"
+}

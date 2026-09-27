@@ -1,0 +1,22 @@
+{
+  "id": "comfort-mode",
+  "name": "Comfort Mode",
+  "aliases": [
+    "comfort",
+    "normal-mode"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Comfort/Normal driving mode is active.",
+  "causes": [
+    "Default or driver-selected mode"
+  ],
+  "solutions": [
+    "Default daily driving mode"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/comfort-mode.svg"
+}

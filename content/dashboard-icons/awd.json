@@ -1,0 +1,26 @@
+{
+  "id": "awd",
+  "name": "All-Wheel Drive",
+  "aliases": [
+    "awd-active"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "All-wheel drive system is engaged or active.",
+  "causes": [
+    "AWD system automatically engaged",
+    "Driver selected AWD mode"
+  ],
+  "solutions": [
+    "Normal operation",
+    "Check transfer case fluid if service light accompanies"
+  ],
+  "relatedProducts": [
+    "Transfer case fluid",
+    "AWD coupling fluid"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/awd.svg"
+}

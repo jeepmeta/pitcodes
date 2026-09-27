@@ -1,0 +1,32 @@
+{
+  "id": "hybrid-system",
+  "name": "Hybrid System Warning",
+  "aliases": [
+    "hybrid-fault",
+    "ready-light"
+  ],
+  "vehicleSpecific": true,
+  "color": "red",
+  "severity": "critical",
+  "category": "hybrid",
+  "definition": "Hybrid system fault detected. Vehicle may not enter READY mode or may have reduced power.",
+  "causes": [
+    "HV battery fault",
+    "Inverter/converter issue",
+    "MG (motor-generator) fault",
+    "HV contactor problem"
+  ],
+  "solutions": [
+    "Do not ignore",
+    "Scan hybrid-specific codes",
+    "Dealer-level diagnosis often required",
+    "HV system is high voltage — safety first"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [
+    "P0A80",
+    "P0A7F",
+    "P3000"
+  ],
+  "svg": "svg/hybrid-system.svg"
+}

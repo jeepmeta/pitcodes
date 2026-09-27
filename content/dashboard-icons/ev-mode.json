@@ -1,0 +1,26 @@
+{
+  "id": "ev-mode",
+  "name": "EV Mode",
+  "aliases": [
+    "electric-mode",
+    "ev"
+  ],
+  "vehicleSpecific": true,
+  "color": "green",
+  "severity": "info",
+  "category": "hybrid",
+  "definition": "Electric-only propulsion mode is active (hybrid/PHEV).",
+  "causes": [
+    "Driver selected EV mode",
+    "Sufficient battery charge and conditions met"
+  ],
+  "solutions": [
+    "Normal for short trips / low speed",
+    "Engine will start if power demand exceeds EV capability"
+  ],
+  "relatedProducts": [
+    "EVSE charger"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/ev-mode.svg"
+}

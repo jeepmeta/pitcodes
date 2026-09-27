@@ -1,0 +1,37 @@
+{
+  "id": "stability-control",
+  "name": "Electronic Stability Control",
+  "aliases": [
+    "esc",
+    "esp",
+    "vsc",
+    "dsc",
+    "vdc"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Electronic stability program is intervening (flashing) or has a fault (steady).",
+  "causes": [
+    "Vehicle dynamics intervention",
+    "Yaw rate sensor fault",
+    "Steering angle sensor",
+    "Wheel speed discrepancy"
+  ],
+  "solutions": [
+    "Flashing during slippery conditions is normal",
+    "Steady light: scan ESC codes",
+    "Calibrate steering angle sensor after alignment"
+  ],
+  "relatedProducts": [
+    "Steering angle sensor",
+    "Yaw rate sensor"
+  ],
+  "relatedObdCodes": [
+    "C1234",
+    "C0061",
+    "C0062"
+  ],
+  "svg": "svg/stability-control.svg"
+}

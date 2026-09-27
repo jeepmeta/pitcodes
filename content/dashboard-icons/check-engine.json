@@ -1,0 +1,45 @@
+{
+  "id": "check-engine",
+  "name": "Check Engine",
+  "aliases": [
+    "malfunction-indicator-lamp",
+    "mil",
+    "service-engine-soon"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "engine",
+  "definition": "Indicates a fault detected by the engine control module (ECM/PCM). May be emissions-related or a serious engine problem.",
+  "causes": [
+    "Faulty oxygen sensor",
+    "Loose/damaged gas cap",
+    "Catalytic converter failure",
+    "Mass airflow sensor issue",
+    "Spark plug/ignition coil failure",
+    "Vacuum leak"
+  ],
+  "solutions": [
+    "Read OBD-II codes with a scanner",
+    "Tighten or replace gas cap",
+    "Replace faulty sensors",
+    "Address ignition/fuel system faults",
+    "Seek professional diagnosis if persistent"
+  ],
+  "relatedProducts": [
+    "OBD-II scanner",
+    "Oxygen sensor",
+    "Gas cap",
+    "Spark plugs",
+    "MAF sensor cleaner"
+  ],
+  "relatedObdCodes": [
+    "P0300",
+    "P0171",
+    "P0420",
+    "P0135",
+    "P0401",
+    "P0128"
+  ],
+  "svg": "svg/check-engine.svg"
+}

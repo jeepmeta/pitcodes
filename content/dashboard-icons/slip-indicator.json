@@ -1,0 +1,29 @@
+{
+  "id": "slip-indicator",
+  "name": "Slip / Skid Indicator",
+  "aliases": [
+    "slip",
+    "skid"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Vehicle is experiencing wheel slip or stability system is active.",
+  "causes": [
+    "Low traction surface",
+    "Aggressive acceleration",
+    "Cornering limit exceeded"
+  ],
+  "solutions": [
+    "Reduce throttle",
+    "Steer smoothly",
+    "Allow system to intervene"
+  ],
+  "relatedProducts": [
+    "Winter tires",
+    "All-season tires"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/slip-indicator.svg"
+}

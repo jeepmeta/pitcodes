@@ -1,0 +1,23 @@
+{
+  "id": "4wd-auto",
+  "name": "4WD Auto",
+  "aliases": [
+    "4x4-auto",
+    "auto-4wd"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Automatic 4WD mode — system engages rear/front axle as needed.",
+  "causes": [
+    "Driver selected Auto mode"
+  ],
+  "solutions": [
+    "Suitable for varying conditions",
+    "Default mode for most driving"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/4wd-auto.svg"
+}

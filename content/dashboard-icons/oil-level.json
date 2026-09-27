@@ -1,0 +1,33 @@
+{
+  "id": "oil-level",
+  "name": "Oil Level",
+  "aliases": [
+    "low-oil-level"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "engine",
+  "definition": "Engine oil level is below the recommended minimum. Top up soon to avoid oil pressure issues.",
+  "causes": [
+    "Oil consumption",
+    "Oil leak",
+    "Infrequent oil changes",
+    "Overfilled previously then burned off"
+  ],
+  "solutions": [
+    "Check dipstick when engine is cold/level",
+    "Add correct viscosity oil to full mark",
+    "Inspect for leaks",
+    "Schedule oil change if overdue"
+  ],
+  "relatedProducts": [
+    "Engine oil",
+    "Oil funnel",
+    "Dipstick"
+  ],
+  "relatedObdCodes": [
+    "P250E"
+  ],
+  "svg": "svg/oil-level.svg"
+}

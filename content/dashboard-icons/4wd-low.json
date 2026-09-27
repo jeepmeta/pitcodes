@@ -1,0 +1,23 @@
+{
+  "id": "4wd-low",
+  "name": "4WD Low Range",
+  "aliases": [
+    "4x4-low",
+    "4l"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Four-wheel drive low range is engaged for maximum torque and crawl speed.",
+  "causes": [
+    "Driver selected 4L"
+  ],
+  "solutions": [
+    "Use for off-road crawling, steep grades, recovery",
+    "Do not use on high-traction surfaces at speed"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/4wd-low.svg"
+}

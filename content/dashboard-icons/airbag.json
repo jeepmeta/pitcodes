@@ -1,0 +1,38 @@
+{
+  "id": "airbag",
+  "name": "Airbag / SRS",
+  "aliases": [
+    "srs",
+    "supplemental-restraint-system"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "critical",
+  "category": "safety",
+  "definition": "Supplemental Restraint System (airbag) fault. Airbags may not deploy in a crash.",
+  "causes": [
+    "Faulty clock spring",
+    "Seat occupancy sensor",
+    "Airbag module fault",
+    "Wiring damage",
+    "Previous accident residual codes"
+  ],
+  "solutions": [
+    "Do not ignore — airbags may be disabled",
+    "Scan SRS codes with compatible scanner",
+    "Professional diagnosis required",
+    "Never probe airbag circuits with multimeter"
+  ],
+  "relatedProducts": [
+    "SRS scanner",
+    "Clock spring",
+    "Occupancy sensor"
+  ],
+  "relatedObdCodes": [
+    "B0001",
+    "B0010",
+    "B0020",
+    "B0090"
+  ],
+  "svg": "svg/airbag.svg"
+}

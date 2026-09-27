@@ -1,0 +1,28 @@
+{
+  "id": "seatbelt",
+  "name": "Seatbelt Reminder",
+  "aliases": [
+    "fasten-seatbelt"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "info",
+  "category": "safety",
+  "definition": "Driver or passenger seatbelt is not fastened.",
+  "causes": [
+    "Unbuckled seatbelt",
+    "Faulty seatbelt switch",
+    "Heavy object on seat triggering sensor"
+  ],
+  "solutions": [
+    "Buckle seatbelt",
+    "Remove objects from passenger seat if empty",
+    "Check switch if light stays on when buckled"
+  ],
+  "relatedProducts": [
+    "Seatbelt extender",
+    "Seatbelt switch"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/seatbelt.svg"
+}

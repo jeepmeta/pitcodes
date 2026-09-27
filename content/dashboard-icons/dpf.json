@@ -1,0 +1,35 @@
+{
+  "id": "dpf",
+  "name": "Diesel Particulate Filter",
+  "aliases": [
+    "dpf-regeneration",
+    "soot-filter"
+  ],
+  "vehicleSpecific": true,
+  "color": "amber",
+  "severity": "warning",
+  "category": "emissions",
+  "definition": "DPF is loading with soot or regeneration is needed/failed.",
+  "causes": [
+    "Short-trip driving preventing regen",
+    "Failed regeneration",
+    "Faulty pressure sensors",
+    "EGR issues"
+  ],
+  "solutions": [
+    "Drive at highway speeds for 15–20 min to allow active regen",
+    "Do not ignore — clogged DPF is expensive",
+    "Forced regen at shop if needed"
+  ],
+  "relatedProducts": [
+    "DPF cleaner",
+    "DPF pressure sensor"
+  ],
+  "relatedObdCodes": [
+    "P2002",
+    "P2458",
+    "P2459",
+    "P2463"
+  ],
+  "svg": "svg/dpf.svg"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "door-ajar",
+  "name": "Door Ajar",
+  "aliases": [
+    "door-open"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "info",
+  "category": "body",
+  "definition": "One or more doors, trunk, or hood is not fully closed.",
+  "causes": [
+    "Door not latched",
+    "Faulty door switch",
+    "Obstruction in door seal"
+  ],
+  "solutions": [
+    "Close all doors firmly",
+    "Check trunk and hood",
+    "Inspect door latch if persistent"
+  ],
+  "relatedProducts": [
+    "Door latch",
+    "Door switch"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/door-ajar.svg"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "headlight",
+  "name": "Headlights On",
+  "aliases": [
+    "low-beam",
+    "dipped-beam"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "lighting",
+  "definition": "Low-beam headlights are illuminated.",
+  "causes": [
+    "Headlight switch on",
+    "Auto headlights activated"
+  ],
+  "solutions": [
+    "Normal operation"
+  ],
+  "relatedProducts": [
+    "Headlight bulbs",
+    "LED conversion kit"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/headlight.svg"
+}

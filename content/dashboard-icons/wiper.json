@@ -1,0 +1,28 @@
+{
+  "id": "wiper",
+  "name": "Wiper Service",
+  "aliases": [
+    "wiper-fault"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "maintenance",
+  "definition": "Wiper system fault or service reminder.",
+  "causes": [
+    "Worn wiper blades",
+    "Motor fault",
+    "Frozen wipers"
+  ],
+  "solutions": [
+    "Replace blades every 6–12 months",
+    "Clear ice before operating",
+    "Check fuse/motor if inoperative"
+  ],
+  "relatedProducts": [
+    "Wiper blades",
+    "Wiper motor"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/wiper.svg"
+}

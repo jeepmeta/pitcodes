@@ -1,0 +1,33 @@
+{
+  "id": "battery-low",
+  "name": "Low Battery",
+  "aliases": [
+    "battery-warning"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "electrical",
+  "definition": "Battery voltage is low or battery health is degraded.",
+  "causes": [
+    "Aging battery",
+    "Parasitic drain",
+    "Short trips preventing full charge",
+    "Faulty alternator"
+  ],
+  "solutions": [
+    "Test battery CCA and voltage",
+    "Charge battery fully",
+    "Check for parasitic drains",
+    "Replace battery if weak"
+  ],
+  "relatedProducts": [
+    "Battery charger",
+    "Battery tester",
+    "Replacement battery"
+  ],
+  "relatedObdCodes": [
+    "P0562"
+  ],
+  "svg": "svg/battery-low.svg"
+}

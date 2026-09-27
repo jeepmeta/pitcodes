@@ -1,0 +1,23 @@
+{
+  "id": "auto-high-beam",
+  "name": "Auto High Beam",
+  "aliases": [
+    "ahb",
+    "automatic-high-beam"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "lighting",
+  "definition": "Automatic high-beam control is active.",
+  "causes": [
+    "Auto high-beam enabled and conditions met"
+  ],
+  "solutions": [
+    "System switches high/low based on traffic",
+    "Override with stalk if needed"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/auto-high-beam.svg"
+}

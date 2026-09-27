@@ -1,0 +1,30 @@
+{
+  "id": "brake-pad-wear",
+  "name": "Brake Pad Wear",
+  "aliases": [
+    "pad-wear-sensor"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "brakes",
+  "definition": "Brake pads have worn to the minimum thickness. Replacement is required soon.",
+  "causes": [
+    "Normal wear",
+    "Aggressive driving",
+    "Warped rotors accelerating wear"
+  ],
+  "solutions": [
+    "Replace brake pads",
+    "Inspect rotors for wear/warping",
+    "Replace rotors if below minimum thickness",
+    "Bed-in new pads properly"
+  ],
+  "relatedProducts": [
+    "Brake pads",
+    "Brake rotors",
+    "Brake grease"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/brake-pad-wear.svg"
+}

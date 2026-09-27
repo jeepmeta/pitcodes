@@ -1,0 +1,28 @@
+{
+  "id": "glow-plug",
+  "name": "Glow Plug / Diesel Wait",
+  "aliases": [
+    "diesel-preheat"
+  ],
+  "vehicleSpecific": true,
+  "color": "amber",
+  "severity": "info",
+  "category": "engine",
+  "definition": "Glow plugs are heating. Wait for light to extinguish before starting (cold diesel).",
+  "causes": [
+    "Cold engine start cycle"
+  ],
+  "solutions": [
+    "Wait for light to go out, then start",
+    "If light stays on or flashes, diagnose glow plug system"
+  ],
+  "relatedProducts": [
+    "Glow plugs",
+    "Glow plug relay"
+  ],
+  "relatedObdCodes": [
+    "P0380",
+    "P0381"
+  ],
+  "svg": "svg/glow-plug.svg"
+}

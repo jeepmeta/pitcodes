@@ -1,0 +1,40 @@
+{
+  "id": "oil-pressure",
+  "name": "Oil Pressure",
+  "aliases": [
+    "low-oil-pressure",
+    "oil-can"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "critical",
+  "category": "engine",
+  "definition": "Engine oil pressure is critically low. Immediate stop required to prevent catastrophic engine damage.",
+  "causes": [
+    "Low oil level",
+    "Faulty oil pump",
+    "Clogged oil filter",
+    "Worn engine bearings",
+    "Oil pressure sensor failure"
+  ],
+  "solutions": [
+    "Stop engine immediately",
+    "Check oil level",
+    "Do not drive until resolved",
+    "Have oil pressure tested",
+    "Possible oil pump or bearing repair"
+  ],
+  "relatedProducts": [
+    "Engine oil",
+    "Oil filter",
+    "Oil pressure sensor",
+    "Oil pump"
+  ],
+  "relatedObdCodes": [
+    "P0520",
+    "P0521",
+    "P0522",
+    "P0523"
+  ],
+  "svg": "svg/oil-pressure.svg"
+}

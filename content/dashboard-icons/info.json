@@ -1,0 +1,25 @@
+{
+  "id": "info",
+  "name": "Information / Message",
+  "aliases": [
+    "i-info",
+    "message-center"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "system",
+  "definition": "Informational message is available in the driver information center.",
+  "causes": [
+    "Various non-critical alerts",
+    "Maintenance messages",
+    "System status"
+  ],
+  "solutions": [
+    "Read message on instrument cluster or infotainment",
+    "Address underlying condition if actionable"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/info.svg"
+}

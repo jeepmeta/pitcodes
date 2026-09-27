@@ -1,0 +1,22 @@
+{
+  "id": "seat-vent",
+  "name": "Seat Ventilation",
+  "aliases": [
+    "ventilated-seat",
+    "cooled-seat"
+  ],
+  "vehicleSpecific": false,
+  "color": "blue",
+  "severity": "info",
+  "category": "climate",
+  "definition": "Seat ventilation / cooling is active.",
+  "causes": [
+    "Seat vent button pressed"
+  ],
+  "solutions": [
+    "Normal operation"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/seat-vent.svg"
+}

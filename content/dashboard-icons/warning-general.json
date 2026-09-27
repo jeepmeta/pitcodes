@@ -1,0 +1,25 @@
+{
+  "id": "warning-general",
+  "name": "General Warning",
+  "aliases": [
+    "master-warning",
+    "triangle-warning"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "system",
+  "definition": "Master warning indicator — check message center for specific fault.",
+  "causes": [
+    "Any of numerous non-critical system faults",
+    "Door open while moving",
+    "Low fluid, etc."
+  ],
+  "solutions": [
+    "Read associated message",
+    "Address specific condition indicated"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/warning-general.svg"
+}

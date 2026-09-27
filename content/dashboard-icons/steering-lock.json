@@ -1,0 +1,25 @@
+{
+  "id": "steering-lock",
+  "name": "Steering Lock",
+  "aliases": [
+    "column-lock"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "security",
+  "definition": "Steering column lock is engaged or cannot unlock.",
+  "causes": [
+    "Steering wheel turned against lock",
+    "Lock actuator fault",
+    "Key/immobilizer issue"
+  ],
+  "solutions": [
+    "Turn wheel gently left/right while starting",
+    "Try spare key",
+    "Dealer service if stuck"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/steering-lock.svg"
+}

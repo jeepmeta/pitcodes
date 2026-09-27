@@ -1,0 +1,26 @@
+{
+  "id": "snow-mode",
+  "name": "Snow Mode",
+  "aliases": [
+    "winter-mode",
+    "snow"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Snow/winter drive mode is active. Throttle and shift mapping optimized for low traction.",
+  "causes": [
+    "Driver selected snow mode"
+  ],
+  "solutions": [
+    "Normal operation in winter conditions",
+    "Switch back to normal mode on clear roads"
+  ],
+  "relatedProducts": [
+    "Winter tires",
+    "Snow chains"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/snow-mode.svg"
+}

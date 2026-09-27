@@ -1,0 +1,24 @@
+{
+  "id": "lane-keep",
+  "name": "Lane Keep Assist",
+  "aliases": [
+    "lka",
+    "lane-departure"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "adas",
+  "definition": "Lane keep assist is active or has issued a lane departure warning.",
+  "causes": [
+    "System active",
+    "Unintentional lane drift detected"
+  ],
+  "solutions": [
+    "Keep hands on wheel",
+    "Steer back to center of lane"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/lane-keep.svg"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ac",
+  "name": "Air Conditioning",
+  "aliases": [
+    "a/c",
+    "air-con"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "climate",
+  "definition": "Air conditioning compressor is engaged.",
+  "causes": [
+    "A/C button on",
+    "Auto climate calling for cooling"
+  ],
+  "solutions": [
+    "Normal operation"
+  ],
+  "relatedProducts": [
+    "A/C refrigerant",
+    "Cabin filter"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/ac.svg"
+}

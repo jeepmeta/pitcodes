@@ -1,0 +1,23 @@
+{
+  "id": "sport-mode",
+  "name": "Sport Mode",
+  "aliases": [
+    "s-mode",
+    "sport"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Sport driving mode is active — sharper throttle, held gears, firmer shifts.",
+  "causes": [
+    "Driver selected Sport mode"
+  ],
+  "solutions": [
+    "Normal when desired",
+    "Switch to Comfort/Normal for daily driving and fuel economy"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/sport-mode.svg"
+}

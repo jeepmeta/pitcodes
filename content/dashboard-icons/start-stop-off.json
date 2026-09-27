@@ -1,0 +1,23 @@
+{
+  "id": "start-stop-off",
+  "name": "Auto Start-Stop Off",
+  "aliases": [
+    "iss-off"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "engine",
+  "definition": "Auto start-stop has been disabled or is unavailable.",
+  "causes": [
+    "Driver disabled system",
+    "Conditions not met (cold engine, low battery, etc.)"
+  ],
+  "solutions": [
+    "Re-enable if desired",
+    "Normal if conditions prevent operation"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/start-stop-off.svg"
+}

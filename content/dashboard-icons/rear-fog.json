@@ -1,0 +1,24 @@
+{
+  "id": "rear-fog",
+  "name": "Rear Fog Light",
+  "aliases": [
+    "rear-fog-lamp"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "lighting",
+  "definition": "Rear fog light is on. Extremely bright — use only in dense fog.",
+  "causes": [
+    "Rear fog switch activated"
+  ],
+  "solutions": [
+    "Turn off when visibility improves",
+    "Illegal to use in clear weather in many jurisdictions"
+  ],
+  "relatedProducts": [
+    "Rear fog bulb"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/rear-fog.svg"
+}

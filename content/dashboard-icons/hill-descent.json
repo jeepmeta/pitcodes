@@ -1,0 +1,23 @@
+{
+  "id": "hill-descent",
+  "name": "Hill Descent Control",
+  "aliases": [
+    "hdc",
+    "downhill-assist"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Hill descent control is active — system modulates brakes to maintain slow descent speed.",
+  "causes": [
+    "Driver activated HDC"
+  ],
+  "solutions": [
+    "Use on steep loose descents",
+    "Keep foot off brake/accelerator and steer"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/hill-descent.svg"
+}

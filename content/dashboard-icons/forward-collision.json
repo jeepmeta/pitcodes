@@ -1,0 +1,28 @@
+{
+  "id": "forward-collision",
+  "name": "Forward Collision Warning",
+  "aliases": [
+    "fcw",
+    "pre-collision",
+    "aeb"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "critical",
+  "category": "adas",
+  "definition": "Forward collision warning or automatic emergency braking is alerting/intervening.",
+  "causes": [
+    "Rapid closure on vehicle/obstacle ahead",
+    "Sensor obstruction"
+  ],
+  "solutions": [
+    "Brake immediately",
+    "Clean radar/camera sensors",
+    "Do not rely solely on AEB"
+  ],
+  "relatedProducts": [
+    "Sensor cleaner"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/forward-collision.svg"
+}

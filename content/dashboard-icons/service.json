@@ -1,0 +1,29 @@
+{
+  "id": "service",
+  "name": "Service Indicator",
+  "aliases": [
+    "service-due",
+    "wrench"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "maintenance",
+  "definition": "Scheduled service interval has been reached or a service reminder is active.",
+  "causes": [
+    "Mileage/time interval elapsed",
+    "Oil life expired",
+    "Dealer-set reminder"
+  ],
+  "solutions": [
+    "Schedule maintenance",
+    "Reset indicator after service with scan tool or pedal procedure"
+  ],
+  "relatedProducts": [
+    "Oil change kit",
+    "Cabin filter",
+    "Air filter"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/service.svg"
+}

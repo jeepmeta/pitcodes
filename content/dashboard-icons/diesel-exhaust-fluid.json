@@ -1,0 +1,34 @@
+{
+  "id": "diesel-exhaust-fluid",
+  "name": "Diesel Exhaust Fluid (DEF / AdBlue)",
+  "aliases": [
+    "def",
+    "adblue",
+    "urea"
+  ],
+  "vehicleSpecific": true,
+  "color": "amber",
+  "severity": "warning",
+  "category": "emissions",
+  "definition": "DEF / AdBlue level is low or quality is insufficient. Engine may derate if empty.",
+  "causes": [
+    "Low DEF level",
+    "Contaminated DEF",
+    "DEF injector fault",
+    "NOx sensor"
+  ],
+  "solutions": [
+    "Refill with ISO 22241 compliant DEF only",
+    "Do not dilute",
+    "Address quality codes promptly to avoid limp mode"
+  ],
+  "relatedProducts": [
+    "DEF / AdBlue fluid"
+  ],
+  "relatedObdCodes": [
+    "P203F",
+    "P207F",
+    "P20EE"
+  ],
+  "svg": "svg/diesel-exhaust-fluid.svg"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "battery-charge",
+  "name": "Battery / Charging System",
+  "aliases": [
+    "alternator",
+    "charging-system"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "critical",
+  "category": "electrical",
+  "definition": "Charging system fault. Battery is not being charged by the alternator. Vehicle will eventually stall.",
+  "causes": [
+    "Failed alternator",
+    "Broken serpentine belt",
+    "Bad battery",
+    "Corroded battery terminals",
+    "Voltage regulator failure"
+  ],
+  "solutions": [
+    "Check belt condition",
+    "Test battery and alternator voltage",
+    "Clean terminals",
+    "Replace alternator or battery as needed",
+    "Avoid long trips until fixed"
+  ],
+  "relatedProducts": [
+    "Battery",
+    "Alternator",
+    "Serpentine belt",
+    "Battery terminal cleaner"
+  ],
+  "relatedObdCodes": [
+    "P0562",
+    "P0563",
+    "P0620",
+    "P0622"
+  ],
+  "svg": "svg/battery-charge.svg"
+}

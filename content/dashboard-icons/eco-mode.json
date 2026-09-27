@@ -1,0 +1,24 @@
+{
+  "id": "eco-mode",
+  "name": "Eco Mode",
+  "aliases": [
+    "eco",
+    "economy-mode"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Economy mode is active — throttle and shift mapping optimized for fuel savings.",
+  "causes": [
+    "Driver selected Eco mode",
+    "Automatic Eco engagement"
+  ],
+  "solutions": [
+    "Use for maximum fuel economy",
+    "May feel less responsive"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/eco-mode.svg"
+}

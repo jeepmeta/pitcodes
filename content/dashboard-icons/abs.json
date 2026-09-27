@@ -1,0 +1,39 @@
+{
+  "id": "abs",
+  "name": "ABS (Anti-lock Braking System)",
+  "aliases": [
+    "anti-lock-brakes"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "brakes",
+  "definition": "ABS fault detected. Normal braking still works but anti-lock function is disabled.",
+  "causes": [
+    "Wheel speed sensor failure",
+    "ABS module fault",
+    "Damaged tone ring",
+    "Wiring issues",
+    "Low battery voltage"
+  ],
+  "solutions": [
+    "Scan ABS codes",
+    "Inspect wheel speed sensors",
+    "Check tone rings for damage",
+    "Verify battery voltage",
+    "Professional ABS diagnosis"
+  ],
+  "relatedProducts": [
+    "Wheel speed sensor",
+    "ABS scanner",
+    "Tone ring"
+  ],
+  "relatedObdCodes": [
+    "C0035",
+    "C0040",
+    "C0045",
+    "C0050",
+    "C0060"
+  ],
+  "svg": "svg/abs.svg"
+}

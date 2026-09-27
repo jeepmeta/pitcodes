@@ -1,0 +1,25 @@
+{
+  "id": "4wd",
+  "name": "Four-Wheel Drive",
+  "aliases": [
+    "4x4",
+    "4wd-high"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "drivetrain",
+  "definition": "Four-wheel drive is engaged (typically part-time 4WD high range).",
+  "causes": [
+    "Driver shifted into 4H"
+  ],
+  "solutions": [
+    "Use on loose surfaces only",
+    "Disengage on dry pavement"
+  ],
+  "relatedProducts": [
+    "Transfer case fluid"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/4wd.svg"
+}

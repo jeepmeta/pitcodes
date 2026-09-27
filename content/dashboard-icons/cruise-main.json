@@ -1,0 +1,21 @@
+{
+  "id": "cruise-main",
+  "name": "Cruise Control Main / Ready",
+  "aliases": [
+    "cruise-ready"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "info",
+  "category": "adas",
+  "definition": "Cruise control system is powered on but not yet set to a speed.",
+  "causes": [
+    "Cruise master switch on"
+  ],
+  "solutions": [
+    "Set speed with SET/- button to activate"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/cruise-main.svg"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "power-steering",
+  "name": "Power Steering",
+  "aliases": [
+    "eps",
+    "electric-power-steering"
+  ],
+  "vehicleSpecific": false,
+  "color": "red",
+  "severity": "warning",
+  "category": "steering",
+  "definition": "Power steering system fault. Steering may become heavy.",
+  "causes": [
+    "EPS motor fault",
+    "Low power steering fluid (hydraulic)",
+    "Steering angle sensor",
+    "Low battery voltage"
+  ],
+  "solutions": [
+    "Check fluid if hydraulic",
+    "Scan EPS codes",
+    "Check battery/charging system",
+    "Professional repair — safety critical"
+  ],
+  "relatedProducts": [
+    "Power steering fluid",
+    "EPS module"
+  ],
+  "relatedObdCodes": [
+    "C1521",
+    "C1522",
+    "U0131"
+  ],
+  "svg": "svg/power-steering.svg"
+}

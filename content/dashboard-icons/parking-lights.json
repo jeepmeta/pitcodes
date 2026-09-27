@@ -1,0 +1,25 @@
+{
+  "id": "parking-lights",
+  "name": "Parking Lights / Position Lights",
+  "aliases": [
+    "sidelights",
+    "drl"
+  ],
+  "vehicleSpecific": false,
+  "color": "green",
+  "severity": "info",
+  "category": "lighting",
+  "definition": "Parking/position lights or daytime running lights are on.",
+  "causes": [
+    "Light switch in park position",
+    "DRLs automatic"
+  ],
+  "solutions": [
+    "Normal operation"
+  ],
+  "relatedProducts": [
+    "Parking light bulbs"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/parking-lights.svg"
+}

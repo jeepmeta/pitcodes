@@ -1,0 +1,22 @@
+{
+  "id": "ready",
+  "name": "READY (Hybrid/EV)",
+  "aliases": [
+    "ready-mode"
+  ],
+  "vehicleSpecific": true,
+  "color": "green",
+  "severity": "info",
+  "category": "hybrid",
+  "definition": "Hybrid/EV system is READY to drive — propulsion system is active even if engine is off.",
+  "causes": [
+    "Successful power-on of HV system"
+  ],
+  "solutions": [
+    "Vehicle can be driven",
+    "Engine may start automatically when needed"
+  ],
+  "relatedProducts": [],
+  "relatedObdCodes": [],
+  "svg": "svg/ready.svg"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "low-fuel",
+  "name": "Low Fuel",
+  "aliases": [
+    "fuel-warning"
+  ],
+  "vehicleSpecific": false,
+  "color": "amber",
+  "severity": "warning",
+  "category": "fuel",
+  "definition": "Fuel level is low — typically less than 50–80 km (30–50 mi) remaining.",
+  "causes": [
+    "Fuel tank nearly empty"
+  ],
+  "solutions": [
+    "Refuel soon",
+    "Avoid running completely dry (fuel pump cooling)"
+  ],
+  "relatedProducts": [
+    "Fuel"
+  ],
+  "relatedObdCodes": [],
+  "svg": "svg/low-fuel.svg"
+}

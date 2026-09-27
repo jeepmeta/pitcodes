@@ -1,0 +1,37 @@
+{
+  "id": "epc",
+  "name": "EPC (Electronic Power Control)",
+  "aliases": [
+    "electronic-power-control"
+  ],
+  "vehicleSpecific": true,
+  "color": "amber",
+  "severity": "warning",
+  "category": "engine",
+  "definition": "Electronic throttle or powertrain control fault. Vehicle may enter limp mode with reduced power.",
+  "causes": [
+    "Throttle body issues",
+    "Accelerator pedal sensor",
+    "Wiring/connectors",
+    "ECM software",
+    "Brake light switch"
+  ],
+  "solutions": [
+    "Scan for fault codes",
+    "Clean throttle body",
+    "Check accelerator pedal position sensor",
+    "Inspect wiring harness",
+    "Dealer diagnosis for VW/Audi group"
+  ],
+  "relatedProducts": [
+    "Throttle body cleaner",
+    "OBD-II scanner"
+  ],
+  "relatedObdCodes": [
+    "P0221",
+    "P0121",
+    "P2135",
+    "P2101"
+  ],
+  "svg": "svg/epc.svg"
+}
