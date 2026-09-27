@@ -1,3 +1,32 @@
+# Agent instructions — PIT.CODES
+
+## Product
+
+Build the premier **OBD code** + **dash light** reference: fast, accurate, mobile-first, SEO-strong, monetized without spam. Read `VISION.md` and `docs/REPO_STRUCTURE.md`.
+
+## Skills (required)
+
+| Skill | Path |
+|-------|------|
+| Velite collections / SEO schemas | `.agents/skills/velite/SKILL.md` |
+| MDX articles + affiliate frontmatter | `.agents/skills/articles/SKILL.md` |
+| Ads + affiliate placement | `.agents/skills/monetization/SKILL.md` |
+
+Before generating MDX, load the **articles** skill and the matching schema in `velite.config.ts`.
+
+## Content rules
+
+- Prefer structured collection data over one-off hardcoded pages.
+- Internal link codes ↔ dash lights via `relatedObdCodes` / related products.
+- Never invent OBD definitions or affiliate URLs.
+- Empty route files are not done — implement read from `.velite` / `#site/content`.
+
+## Repo layout
+
+- Data: `content/`
+- UI: `app/`, `components/`
+- Generators: `lib/scripts/`
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know

@@ -1,40 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PIT.CODES
 
-## Getting Started
+Fast, accurate **OBD-II code** and **dashboard warning light** lookup. Mobile-first. SEO-optimized. Monetized without spam.
 
-First, run the development server:
+See [VISION.md](./VISION.md) and [docs/REPO_STRUCTURE.md](./docs/REPO_STRUCTURE.md).
+
+## Stack
+
+- **Next.js** (App Router) + Tailwind
+- **Velite** content collections (typed JSON + MDX)
+- Local OBD dataset + dash icon SVGs
+- Affiliate + ad components in `components/monetization/`
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run generate:icons   # dashboard JSON/SVG pipeline
+npm run dev              # icons + velite + next dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm run build            # icons + velite + next build
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | Purpose |
+|------|---------|
+| `content/codes/` | Per-code OBD JSON (Velite `codes`) |
+| `content/code-db/raw-codes.json` | Bulk source for code generation |
+| `content/dashboard-icons/` | Dash light metadata + `svg/` |
+| `content/articles/**` | MDX guides, reviews, comparisons |
 
-## Dashboard Icons
+Generate article MDX only via **`.agents/skills/articles`** so frontmatter matches `velite.config.ts` and affiliate URLs stay valid.
 
-Dashboard symbol metadata and SVGs are generated from `lib/scripts/generate-icons.mjs` into `content/dashboard-icons/`. Run `npm run generate:icons` to regenerate them; `npm run dev` and `npm run build` generate the files and build the Velite collection automatically. The typed collection is exported as `dashboardIcons` from `#site/content`, and each icon's `svg` field is a public static URL.
+## Routes
 
-## Learn More
+- `/codes` · `/codes/[code]` — OBD lookup
+- `/dash-lights` · `/dash-lights/[slug]` — dash icon gallery + detail
+- `/guides/[slug]` — troubleshooting, decisions, comparisons
+- `/reviews/[slug]` — product deep-dives
+- `/articles` — editorial index
 
-To learn more about Next.js, take a look at the following resources:
+## Agents
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Skill | When to use |
+|-------|-------------|
+| `.agents/skills/velite` | Schema / collection changes |
+| `.agents/skills/articles` | Writing or bulk-generating MDX |
+| `.agents/skills/monetization` | Ad slots, affiliate blocks, disclosure |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private — all rights reserved.
