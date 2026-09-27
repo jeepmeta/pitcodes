@@ -1,0 +1,26 @@
+{
+  "code": "P1813",
+  "title": "P1813 – Transmission 4-Wheel Drive Low Indicator Circuit Failure",
+  "description": "Transmission 4-Wheel Drive Low Indicator Circuit Failure",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1813",
+    "transmission 4-wheel drive low indicator circuit"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

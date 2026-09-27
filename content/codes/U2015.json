@@ -1,0 +1,26 @@
+{
+  "code": "U2015",
+  "title": "U2015 – Signal Link Fault (Non SCP)",
+  "description": "Signal Link Fault (Non SCP) Diagnostic trouble code U2015. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Network",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "U2015",
+    "signal link fault (non scp)"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

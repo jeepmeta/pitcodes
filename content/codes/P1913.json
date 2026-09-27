@@ -1,0 +1,26 @@
+{
+  "code": "P1913",
+  "title": "P1913 – Transmission Pressure Circuit Solenoid Open or Short to Ground",
+  "description": "Transmission Pressure Circuit Solenoid Open or Short to Ground",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1913",
+    "transmission pressure circuit solenoid open or"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

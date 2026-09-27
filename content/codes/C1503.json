@@ -1,0 +1,26 @@
+{
+  "code": "C1503",
+  "title": "C1503 – Dynamic Stability Control Left Front Valve Malfunction",
+  "description": "Dynamic Stability Control Left Front Valve Malfunction",
+  "category": "Chassis",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "C1503",
+    "dynamic stability control left front valve"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

@@ -1,0 +1,26 @@
+{
+  "code": "C1725",
+  "title": "C1725 – Air Suspension Front Pneumatic Failure",
+  "description": "Air Suspension Front Pneumatic Failure Diagnostic trouble code C1725. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Chassis",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "C1725",
+    "air suspension front pneumatic failure"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

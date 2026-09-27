@@ -1,0 +1,26 @@
+{
+  "code": "P1903",
+  "title": "P1903 – Transmission 4WD Mode Select Return Input Circuit Failure",
+  "description": "Transmission 4WD Mode Select Return Input Circuit Failure",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1903",
+    "transmission 4wd mode select return input"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

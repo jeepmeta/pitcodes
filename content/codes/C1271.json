@@ -1,0 +1,26 @@
+{
+  "code": "C1271",
+  "title": "C1271 – Motor # 1 Input Circuit Short to Gnd",
+  "description": "Motor # 1 Input Circuit Short to Gnd Diagnostic trouble code C1271. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Chassis",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "C1271",
+    "motor # 1 input circuit short"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

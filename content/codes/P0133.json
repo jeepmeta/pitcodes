@@ -1,0 +1,26 @@
+{
+  "code": "P0133",
+  "title": "P0133 – O2 Sensor Circuit High Voltage (Bank 1 Sensor 1)",
+  "description": "O2 Sensor Circuit High Voltage (Bank 1 Sensor 1) Diagnostic trouble code P0133. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P0133",
+    "o2 sensor circuit high voltage (bank"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

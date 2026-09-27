@@ -1,0 +1,26 @@
+{
+  "code": "B2162",
+  "title": "B2162 – Data Mismatch #2 (receive data does not match what was expect…",
+  "description": "Data Mismatch #2 (receive data does not match what was expected)",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B2162",
+    "data mismatch #2 (receive data does"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

@@ -1,0 +1,26 @@
+{
+  "code": "B2467",
+  "title": "B2467 – Aux Heater Cool Down Time Exceeded (may be con to a453-5 )",
+  "description": "Aux Heater Cool Down Time Exceeded (may be con to a453-5 )",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B2467",
+    "aux heater cool down time exceeded"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

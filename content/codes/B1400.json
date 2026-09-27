@@ -1,0 +1,26 @@
+{
+  "code": "B1400",
+  "title": "B1400 – Driver Power Window One Touch Window Relay Circuit Short To B…",
+  "description": "Driver Power Window One Touch Window Relay Circuit Short To Battery",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B1400",
+    "driver power window one touch window"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

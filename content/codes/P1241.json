@@ -1,0 +1,26 @@
+{
+  "code": "P1241",
+  "title": "P1241 – Fuel Pump Control Out Of Range",
+  "description": "Fuel Pump Control Out Of Range Diagnostic trouble code P1241. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1241",
+    "fuel pump control out of range"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

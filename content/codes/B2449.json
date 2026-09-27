@@ -1,0 +1,26 @@
+{
+  "code": "B2449",
+  "title": "B2449 – Aux Heater Glow Plug Circuit Short to Ground",
+  "description": "Aux Heater Glow Plug Circuit Short to Ground Diagnostic trouble code B2449. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B2449",
+    "aux heater glow plug circuit short"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

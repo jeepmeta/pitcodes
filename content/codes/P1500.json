@@ -1,0 +1,26 @@
+{
+  "code": "P1500",
+  "title": "P1500 – Secondary Switch Solenoid Circuit Malfunction",
+  "description": "Secondary Switch Solenoid Circuit Malfunction Diagnostic trouble code P1500. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1500",
+    "secondary switch solenoid circuit malfunction"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

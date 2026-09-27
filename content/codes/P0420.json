@@ -1,0 +1,26 @@
+{
+  "code": "P0420",
+  "title": "P0420 – Secondary Air Injection System Relay \"B\" Circuit Malfunction",
+  "description": "Secondary Air Injection System Relay \"B\" Circuit Malfunction",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P0420",
+    "secondary air injection system relay \"b\""
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

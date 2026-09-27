@@ -1,0 +1,26 @@
+{
+  "code": "B1726",
+  "title": "B1726 – Seat Driver Rear Up Switch Circuit Open",
+  "description": "Seat Driver Rear Up Switch Circuit Open Diagnostic trouble code B1726. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B1726",
+    "seat driver rear up switch circuit"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

@@ -1,0 +1,26 @@
+{
+  "code": "P0736",
+  "title": "P0736 – Gear 5 Incorrect ratio",
+  "description": "Gear 5 Incorrect ratio Diagnostic trouble code P0736. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P0736",
+    "gear 5 incorrect ratio"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

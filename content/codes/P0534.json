@@ -1,0 +1,26 @@
+{
+  "code": "P0534",
+  "title": "P0534 – A/C Refrigerant Pressure Sensor Circuit High Input",
+  "description": "A/C Refrigerant Pressure Sensor Circuit High Input",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P0534",
+    "a/c refrigerant pressure sensor circuit high"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

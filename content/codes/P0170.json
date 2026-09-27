@@ -1,0 +1,26 @@
+{
+  "code": "P0170",
+  "title": "P0170 – O2 Sensor Heater Circuit Malfunction (Bank 2 Sensor 3)",
+  "description": "O2 Sensor Heater Circuit Malfunction (Bank 2 Sensor 3)",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P0170",
+    "o2 sensor heater circuit malfunction (bank"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

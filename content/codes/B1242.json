@@ -1,0 +1,26 @@
+{
+  "code": "B1242",
+  "title": "B1242 – Air Flow Recirculation Door Driver Circuit Failure",
+  "description": "Air Flow Recirculation Door Driver Circuit Failure",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B1242",
+    "air flow recirculation door driver circuit"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

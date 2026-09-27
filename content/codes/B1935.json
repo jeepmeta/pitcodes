@@ -1,0 +1,26 @@
+{
+  "code": "B1935",
+  "title": "B1935 – Air Bag Passenger Inflator Circuit Resistance Low on Squib",
+  "description": "Air Bag Passenger Inflator Circuit Resistance Low on Squib",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B1935",
+    "air bag passenger inflator circuit resistance"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

@@ -1,0 +1,26 @@
+{
+  "code": "B1740",
+  "title": "B1740 – Mirror Driver Horizontal Switch Circuit Short To Ground",
+  "description": "Mirror Driver Horizontal Switch Circuit Short To Ground",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B1740",
+    "mirror driver horizontal switch circuit short"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

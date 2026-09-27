@@ -1,0 +1,26 @@
+{
+  "code": "U2016",
+  "title": "U2016 – Signal Link Short to Ground (Non SCP) / From NGV Module",
+  "description": "Signal Link Short to Ground (Non SCP) / From NGV Module",
+  "category": "Network",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "U2016",
+    "signal link short to ground (non"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

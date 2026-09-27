@@ -1,0 +1,26 @@
+{
+  "code": "C1446",
+  "title": "C1446 – Brake Switch Circuit Failure",
+  "description": "Brake Switch Circuit Failure Diagnostic trouble code C1446. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Chassis",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "C1446",
+    "brake switch circuit failure"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

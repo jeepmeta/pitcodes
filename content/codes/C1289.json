@@ -1,0 +1,26 @@
+{
+  "code": "C1289",
+  "title": "C1289 – Pressure Transducer Redundant / Secondary Input Circuit Failu…",
+  "description": "Pressure Transducer Redundant / Secondary Input Circuit Failure",
+  "category": "Chassis",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "C1289",
+    "pressure transducer redundant / secondary input"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

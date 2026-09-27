@@ -1,0 +1,26 @@
+{
+  "code": "P1730",
+  "title": "P1730 – Insufficient Engine Speed Increase During Self Test",
+  "description": "Insufficient Engine Speed Increase During Self Test",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1730",
+    "insufficient engine speed increase during self"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

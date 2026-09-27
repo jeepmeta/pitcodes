@@ -1,0 +1,26 @@
+{
+  "code": "P1636",
+  "title": "P1636 – Theft Deterrent Start Enable Signal Not Correct/ Main Relay M…",
+  "description": "Theft Deterrent Start Enable Signal Not Correct/ Main Relay Malfunction (Power Hold)",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1636",
+    "theft deterrent start enable signal not"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

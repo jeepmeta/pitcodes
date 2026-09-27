@@ -1,0 +1,26 @@
+{
+  "code": "C1495",
+  "title": "C1495 – Traction Control Motor Potentiometer Circuit Failure",
+  "description": "Traction Control Motor Potentiometer Circuit Failure",
+  "category": "Chassis",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "C1495",
+    "traction control motor potentiometer circuit failure"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

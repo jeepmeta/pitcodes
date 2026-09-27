@@ -1,0 +1,26 @@
+{
+  "code": "U1736",
+  "title": "U1736 – SCP (J1850) Lack of Acknowledgment for Telltales",
+  "description": "SCP (J1850) Lack of Acknowledgment for Telltales Diagnostic trouble code U1736. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Network",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "U1736",
+    "scp (j1850) lack of acknowledgment for"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

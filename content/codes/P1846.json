@@ -1,0 +1,26 @@
+{
+  "code": "P1846",
+  "title": "P1846 – Transmission Transfer Case Shift Motor Short Circuit To Ground",
+  "description": "Transmission Transfer Case Shift Motor Short Circuit To Ground",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1846",
+    "transmission transfer case shift motor short"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

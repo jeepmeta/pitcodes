@@ -1,0 +1,26 @@
+{
+  "code": "B1907",
+  "title": "B1907 – Air Bag Crash Sensor #2 Ground Circuit Failure",
+  "description": "Air Bag Crash Sensor #2 Ground Circuit Failure Diagnostic trouble code B1907. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B1907",
+    "air bag crash sensor #2 ground"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

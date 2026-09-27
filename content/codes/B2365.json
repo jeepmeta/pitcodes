@@ -1,0 +1,26 @@
+{
+  "code": "B2365",
+  "title": "B2365 – B-pillar Power Sliding Door Open/Close Switch Input Ckt Short…",
+  "description": "B-pillar Power Sliding Door Open/Close Switch Input Ckt Short to Gnd",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B2365",
+    "b-pillar power sliding door open/close switch"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

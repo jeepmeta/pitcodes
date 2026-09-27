@@ -1,0 +1,26 @@
+{
+  "code": "C1179",
+  "title": "C1179 – Speed Control Actuator Assembly Cable Slack Failure",
+  "description": "Speed Control Actuator Assembly Cable Slack Failure",
+  "category": "Chassis",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "C1179",
+    "speed control actuator assembly cable slack"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

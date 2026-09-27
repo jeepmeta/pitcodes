@@ -1,0 +1,26 @@
+{
+  "code": "P1626",
+  "title": "P1626 – Control Module Long Term Memory Performance/ Immobilizer Code…",
+  "description": "Control Module Long Term Memory Performance/ Immobilizer Code Words Do Not Match",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1626",
+    "control module long term memory performance/"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

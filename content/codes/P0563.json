@@ -1,0 +1,26 @@
+{
+  "code": "P0563",
+  "title": "P0563 – A/C pressure sensor low voltage(Chrysler)",
+  "description": "A/C pressure sensor low voltage(Chrysler) Diagnostic trouble code P0563. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P0563",
+    "a/c pressure sensor low voltage(chrysler)"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

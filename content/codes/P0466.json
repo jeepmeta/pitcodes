@@ -1,0 +1,26 @@
+{
+  "code": "P0466",
+  "title": "P0466 – Purge Flow Sensor Circuit Malfunction",
+  "description": "Purge Flow Sensor Circuit Malfunction Diagnostic trouble code P0466. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P0466",
+    "purge flow sensor circuit malfunction"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

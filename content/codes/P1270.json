@@ -1,0 +1,26 @@
+{
+  "code": "P1270",
+  "title": "P1270 – Cylinder #5 High To Low Side Short",
+  "description": "Cylinder #5 High To Low Side Short Diagnostic trouble code P1270. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1270",
+    "cylinder #5 high to low side"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

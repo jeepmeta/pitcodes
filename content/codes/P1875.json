@@ -1,0 +1,26 @@
+{
+  "code": "P1875",
+  "title": "P1875 – Transmission Component Slipping/ Transmission Mechanical Tran…",
+  "description": "Transmission Component Slipping/ Transmission Mechanical Transfer Case 4x4 Switch Circuit Failure",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1875",
+    "transmission component slipping/ transmission mechanical transfer"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

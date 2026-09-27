@@ -1,0 +1,26 @@
+{
+  "code": "B2231",
+  "title": "B2231 – Air Bag Passenger Circuit Short to Battery - Loop #2",
+  "description": "Air Bag Passenger Circuit Short to Battery - Loop #2",
+  "category": "Body",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "B2231",
+    "air bag passenger circuit short to"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

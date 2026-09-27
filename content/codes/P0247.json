@@ -1,0 +1,26 @@
+{
+  "code": "P0247",
+  "title": "P0247 – Turbocharger Wastegate Solenoid A High",
+  "description": "Turbocharger Wastegate Solenoid A High Diagnostic trouble code P0247. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P0247",
+    "turbocharger wastegate solenoid a high"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}

@@ -1,6 +1,6 @@
 # Target repository structure
 
-```
+```tree
 pitcodes/
 ├── VISION.md
 ├── README.md
@@ -40,7 +40,7 @@ pitcodes/
 ## Schema ↔ folder map
 
 | Collection | Pattern | Route prefix |
-|------------|---------|--------------|
+| ---------- | ------- | ------------ |
 | `codes` | `codes/**/*.json` | `/codes/[code]` |
 | `dashboardIcons` | `dashboard-icons/*.json` | `/dash-lights/[slug]` |
 | `comparisons` | `articles/comparisons/*.mdx` | `/guides/[slug]` |

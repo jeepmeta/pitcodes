@@ -1,0 +1,26 @@
+{
+  "code": "P1143",
+  "title": "P1143 – Lack Of HO2S12 Switch - Sensor Indicates Rich",
+  "description": "Lack Of HO2S12 Switch - Sensor Indicates Rich Diagnostic trouble code P1143. Confirm with a scan tool and vehicle-specific service data.",
+  "category": "Powertrain",
+  "severity": "medium",
+  "symptoms": [
+    "Check engine light or stored DTC present",
+    "Driveability or system warning may accompany this code"
+  ],
+  "causes": [
+    "Component or circuit fault related to this monitor",
+    "Wiring, connector, or control module issue"
+  ],
+  "solutions": [
+    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
+    "Inspect related components and wiring before replacing parts",
+    "Clear codes only after repair and confirm monitors complete"
+  ],
+  "keywords": [
+    "P1143",
+    "lack of ho2s12 switch - sensor"
+  ],
+  "relatedCodes": [],
+  "commonVehicles": []
+}
