@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
 
 export default function HomePage() {
   return (
@@ -87,16 +86,18 @@ export default function HomePage() {
       </section>
 
       <section className="mt-10 flex flex-col gap-3 sm:flex-row">
-        <Button variant="primary" size="lg" asChild={false}>
-          <Link href="/codes" className="contents">
-            Look up a code
-          </Link>
-        </Button>
-        <Button variant="outline" size="lg">
-          <Link href="/dash-lights" className="contents">
-            Find a dash light
-          </Link>
-        </Button>
+        <Link
+          href="/codes"
+          className="inline-flex h-12 items-center justify-center rounded-lg bg-orange-600 px-6 text-base font-medium text-white hover:bg-orange-500"
+        >
+          Look up a code
+        </Link>
+        <Link
+          href="/dash-lights"
+          className="inline-flex h-12 items-center justify-center rounded-lg border border-zinc-700 px-6 text-base font-medium text-zinc-200 hover:bg-zinc-900"
+        >
+          Find a dash light
+        </Link>
       </section>
     </div>
   )
