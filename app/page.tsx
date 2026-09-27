@@ -1,69 +1,103 @@
-import Image from "next/image";
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-25"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/6 px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/8">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:py-16">
+      <section className="space-y-4 text-center sm:text-left">
+        <p className="text-sm font-medium uppercase tracking-widest text-orange-500">
+          PIT.CODES
+        </p>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          OBD codes and dash lights, without the runaround
+        </h1>
+        <p className="max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
+          Look up the code on your scanner or the symbol on your cluster. Get
+          what it means, what to check, and what to do next — fast, on your
+          phone.
+        </p>
+      </section>
+
+      <section className="mt-10 grid gap-4 sm:grid-cols-2">
+        <Link
+          href="/codes"
+          className="group rounded-2xl border border-zinc-800 bg-zinc-950 p-5 transition hover:border-orange-600/50 hover:bg-zinc-900"
+        >
+          <h2 className="text-lg font-semibold group-hover:text-orange-400">
+            OBD-II codes
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+            Search P0xxx, C0xxx, B0xxx, U0xxx. Symptoms, causes, fixes, and
+            related parts.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-39.5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-3.5 w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/8 px-5 transition-colors hover:border-transparent hover:bg-black/4 dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-39.5"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+          <span className="mt-4 inline-block text-sm font-medium text-orange-500">
+            Browse codes →
+          </span>
+        </Link>
+
+        <Link
+          href="/dash-lights"
+          className="group rounded-2xl border border-zinc-800 bg-zinc-950 p-5 transition hover:border-orange-600/50 hover:bg-zinc-900"
+        >
+          <h2 className="text-lg font-semibold group-hover:text-orange-400">
+            Dashboard lights
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+            Match the icon on your instrument cluster. Severity, causes, and
+            what to do.
+          </p>
+          <span className="mt-4 inline-block text-sm font-medium text-orange-500">
+            Identify a light →
+          </span>
+        </Link>
+      </section>
+
+      <section className="mt-12 rounded-2xl border border-zinc-800 bg-zinc-950/80 p-5">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+          Popular starting points
+        </h2>
+        <ul className="mt-3 flex flex-wrap gap-2">
+          {['P0300', 'P0420', 'P0171', 'P0455', 'P0128'].map((code) => (
+            <li key={code}>
+              <Link
+                href={`/codes/${code}`}
+                className="inline-flex rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 font-mono text-sm text-zinc-200 hover:border-orange-600/40 hover:text-white"
+              >
+                {code}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Link
+              href="/dash-lights/check-engine"
+              className="inline-flex rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 hover:border-orange-600/40 hover:text-white"
+            >
+              Check engine
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/dash-lights/oil-pressure"
+              className="inline-flex rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 hover:border-orange-600/40 hover:text-white"
+            >
+              Oil pressure
+            </Link>
+          </li>
+        </ul>
+      </section>
+
+      <section className="mt-10 flex flex-col gap-3 sm:flex-row">
+        <Button variant="primary" size="lg" asChild={false}>
+          <Link href="/codes" className="contents">
+            Look up a code
+          </Link>
+        </Button>
+        <Button variant="outline" size="lg">
+          <Link href="/dash-lights" className="contents">
+            Find a dash light
+          </Link>
+        </Button>
+      </section>
     </div>
-  );
+  )
 }
