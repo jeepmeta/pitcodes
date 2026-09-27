@@ -1,15 +1,14 @@
 import { defineCollection, defineConfig, s } from 'velite'
 
 // ─────────────────────────────────────────────
-// Shared SEO + E-E-A-T helpers (required on public content)
+// Shared SEO + E-E-A-T helpers
 // ─────────────────────────────────────────────
 
 const seoFields = {
-  title: s.string().min(10).max(70),                    // aim 50-60 chars, front-load keyword
-  description: s.string().min(50).max(160),             // aim 150-160 chars
+  title: s.string().min(10).max(70),
+  description: s.string().min(50).max(160),
   keywords: s.array(s.string()).default([]),
   robots: s.string().default('index, follow'),
-  // cover is required on article collections for social previews
 }
 
 const eeatFields = {
@@ -19,49 +18,58 @@ const eeatFields = {
   reviewer: s.string().default('ASE Certified Master Technician'),
 }
 
+/** Official OBD-II code shape: P|C|B|U + 4 digits */
+const obdCode = s
+  .string()
+  .regex(/^[PCBU]\d{4}$/i, 'Invalid OBD-II code (expected P/C/B/U + 4 digits)')
+
+const articleSlug = s.slug('articles', ['admin', 'login', 'api', 'codes', 'dash-lights'])
+
 // ─────────────────────────────────────────────
-// 1. Core OBD-II Diagnostic Codes (high-value money pages)
+// 1. Core OBD-II codes (money pages)
 // ─────────────────────────────────────────────
 const codes = defineCollection({
   name: 'DiagnosticCode',
   pattern: 'codes/**/*.json',
   schema: s
     .object({
-      code: s.string().regex(/^[BCCP]\d{4}$/i, 'Invalid OBD-II code format'),
-      title: s.string().min(10).max(70),                 // e.g. "P0300 – Random/Multiple Cylinder Misfire"
+      code: obdCode,
+      title: s.string().min(10).max(70),
       description: s.string().min(50).max(160),
       category: s.enum(['Powertrain', 'Body', 'Chassis', 'Network']),
       severity: s.enum(['low', 'medium', 'high', 'critical']),
       symptoms: s.array(s.string()).min(1),
       causes: s.array(s.string()).min(1),
       solutions: s.array(s.string()).min(1),
-      estimatedCost: s.object({
-        min: s.number().min(0),
-        max: s.number().min(0),
-        currency: s.string().default('USD'),
-      }),
+      estimatedCost: s
+        .object({
+          min: s.number().min(0),
+          max: s.number().min(0),
+          currency: s.string().default('USD'),
+        })
+        .optional(),
       commonVehicles: s.array(s.string()).default([]),
+      relatedCodes: s.array(obdCode).default([]),
       keywords: s.array(s.string()).default([]),
       robots: s.string().default('index, follow'),
-      // Optional cover for social sharing of popular codes
       cover: s.image().optional(),
       coverAlt: s.string().max(125).optional(),
     })
-    .transform(data => {
+    .transform((data) => {
       const slug = data.code.toUpperCase()
       return {
         ...data,
+        code: slug,
         slug,
         permalink: `/codes/${slug}`,
         canonical: `/codes/${slug}`,
-        // Ready for structured data
         schemaType: 'TechArticle' as const,
       }
     }),
 })
 
 // ─────────────────────────────────────────────
-// 2. Comparison Articles (tool / scanner round-ups)
+// 2–6. MDX article collections
 // ─────────────────────────────────────────────
 const comparisons = defineCollection({
   name: 'ComparisonArticle',
@@ -69,10 +77,10 @@ const comparisons = defineCollection({
   schema: s
     .object({
       ...seoFields,
-      slug: s.slug('articles', ['admin', 'login', 'api', 'codes']),
+      slug: articleSlug,
       ...eeatFields,
       draft: s.boolean().default(false),
-      cover: s.image(),                                  // required for social
+      cover: s.image(),
       coverAlt: s.string().max(125),
       itemCount: s.number().min(2),
       winningPick: s.object({
@@ -92,9 +100,9 @@ const comparisons = defineCollection({
       toc: s.toc(),
       excerpt: s.excerpt({ length: 160 }),
       body: s.mdx(),
-      metadata: s.metadata(),                            // readingTime + wordCount
+      metadata: s.metadata(),
     })
-    .transform(data => ({
+    .transform((data) => ({
       ...data,
       permalink: `/guides/${data.slug}`,
       canonical: `/guides/${data.slug}`,
@@ -102,48 +110,51 @@ const comparisons = defineCollection({
     })),
 })
 
-// ─────────────────────────────────────────────
-// 3. Deep-Dive Code Articles (long-form P0xxx pages)
-// ─────────────────────────────────────────────
 const deepCodes = defineCollection({
   name: 'DeepDiveArticle',
   pattern: 'articles/codes/*.mdx',
   schema: s
     .object({
       ...seoFields,
-      slug: s.slug('articles', ['admin', 'login', 'api', 'codes']),
-      code: s.string().regex(/^[BCCP]\d{4}$/i),
+      slug: articleSlug,
+      code: obdCode,
       ...eeatFields,
       draft: s.boolean().default(false),
       cover: s.image(),
       coverAlt: s.string().max(125),
       urgencyScore: s.number().min(1).max(10),
       affectedSystems: s.array(s.string()).min(1),
-      diagnosticDifficulty: s.enum(['Beginner', 'Intermediate', 'Advanced', 'Professional']),
+      diagnosticDifficulty: s.enum([
+        'Beginner',
+        'Intermediate',
+        'Advanced',
+        'Professional',
+      ]),
       estimatedRepairTime: s.string(),
       toc: s.toc(),
       excerpt: s.excerpt({ length: 160 }),
       body: s.mdx(),
       metadata: s.metadata(),
     })
-    .transform(data => ({
-      ...data,
-      permalink: `/codes/${data.code.toUpperCase()}/guide`,
-      canonical: `/codes/${data.code.toUpperCase()}/guide`,
-      schemaType: 'TechArticle' as const,
-    })),
+    .transform((data) => {
+      const code = data.code.toUpperCase()
+      return {
+        ...data,
+        code,
+        permalink: `/codes/${code}/guide`,
+        canonical: `/codes/${code}/guide`,
+        schemaType: 'TechArticle' as const,
+      }
+    }),
 })
 
-// ─────────────────────────────────────────────
-// 4. Deep Product Reviews (scanners, tools, parts)
-// ─────────────────────────────────────────────
 const deepProducts = defineCollection({
   name: 'DeepProductArticle',
   pattern: 'articles/products/*.mdx',
   schema: s
     .object({
       ...seoFields,
-      slug: s.slug('articles', ['admin', 'login', 'api', 'codes']),
+      slug: articleSlug,
       productName: s.string().min(3).max(80),
       brand: s.string(),
       model: s.string().optional(),
@@ -162,24 +173,21 @@ const deepProducts = defineCollection({
       body: s.mdx(),
       metadata: s.metadata(),
     })
-    .transform(data => ({
+    .transform((data) => ({
       ...data,
       permalink: `/reviews/${data.slug}`,
       canonical: `/reviews/${data.slug}`,
-      schemaType: 'Product' as const,                   // or Review
+      schemaType: 'Product' as const,
     })),
 })
 
-// ─────────────────────────────────────────────
-// 5. Troubleshooting Guides (symptom → fix workflows)
-// ─────────────────────────────────────────────
 const troubleshooting = defineCollection({
   name: 'TroubleshootingArticle',
   pattern: 'articles/troubleshooting/*.mdx',
   schema: s
     .object({
       ...seoFields,
-      slug: s.slug('articles', ['admin', 'login', 'api', 'codes']),
+      slug: articleSlug,
       symptom: s.string().min(5).max(100),
       ...eeatFields,
       draft: s.boolean().default(false),
@@ -199,7 +207,7 @@ const troubleshooting = defineCollection({
       body: s.mdx(),
       metadata: s.metadata(),
     })
-    .transform(data => ({
+    .transform((data) => ({
       ...data,
       permalink: `/guides/${data.slug}`,
       canonical: `/guides/${data.slug}`,
@@ -207,22 +215,18 @@ const troubleshooting = defineCollection({
     })),
 })
 
-// ─────────────────────────────────────────────
-// 6. Decision Guides (high-intent “should I …?” pages)
-// ─────────────────────────────────────────────
 const decisions = defineCollection({
   name: 'DecisionArticle',
   pattern: 'articles/decisions/*.mdx',
   schema: s
     .object({
       ...seoFields,
-      slug: s.slug('articles', ['admin', 'login', 'api', 'codes']),
+      slug: articleSlug,
       ...eeatFields,
       draft: s.boolean().default(false),
       cover: s.image(),
       coverAlt: s.string().max(125),
       decisionTopic: s.string().min(5).max(80),
-      // Optimized for Featured Snippets / AI Overviews
       quickVerdict: s.string().min(40).max(280),
       keyTakeaways: s.array(s.string()).min(3).max(7),
       estimatedSavings: s.string().optional(),
@@ -231,7 +235,7 @@ const decisions = defineCollection({
       body: s.mdx(),
       metadata: s.metadata(),
     })
-    .transform(data => ({
+    .transform((data) => ({
       ...data,
       permalink: `/guides/${data.slug}`,
       canonical: `/guides/${data.slug}`,
@@ -240,20 +244,21 @@ const decisions = defineCollection({
 })
 
 // ─────────────────────────────────────────────
-// 6. Dashboard symbol icons and diagnostic metadata
+// Dashboard icons
 // ─────────────────────────────────────────────
 const dashboardIcons = defineCollection({
-    name: 'DashboardIcon',
-    pattern: 'dashboard-icons/*.json',
-    schema: s.object({
+  name: 'DashboardIcon',
+  pattern: 'dashboard-icons/*.json',
+  schema: s
+    .object({
       id: s
         .string()
         .min(1)
         .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
         .pipe(s.unique('dashboard-icons')),
       name: s.string().min(1),
-      aliases: s.array(s.string()),
-      vehicleSpecific: s.boolean(),
+      aliases: s.array(s.string()).default([]),
+      vehicleSpecific: s.boolean().default(false),
       color: s.enum(['red', 'amber', 'green', 'blue', 'white']),
       severity: s.enum(['critical', 'warning', 'info']),
       category: s.enum([
@@ -278,19 +283,33 @@ const dashboardIcons = defineCollection({
         'electrical',
       ]),
       definition: s.string().min(1),
-      causes: s.array(s.string()),
-      solutions: s.array(s.string()),
-      relatedProducts: s.array(s.string()),
-      relatedObdCodes: s.array(s.string()),
+      causes: s.array(s.string()).min(1),
+      solutions: s.array(s.string()).min(1),
+      relatedProducts: s.array(s.string()).default([]),
+      relatedObdCodes: s.array(obdCode).default([]),
+      // Relative to the JSON file → content/dashboard-icons/svg/…
       svg: s.file({ allowNonRelativePath: false }),
-    }),
+    })
+    .transform((data) => ({
+      ...data,
+      slug: data.id,
+      permalink: `/dash-lights/${data.id}`,
+      canonical: `/dash-lights/${data.id}`,
+      schemaType: 'TechArticle' as const,
+    })),
 })
 
-// ─────────────────────────────────────────────
-// Config
-// ─────────────────────────────────────────────
 export default defineConfig({
   root: 'content',
+  // Fail CI on schema drift when generating for production
+  strict: process.env.NODE_ENV === 'production',
+  output: {
+    data: '.velite',
+    assets: 'public/static',
+    base: '/static/',
+    // Keep prior assets when watching; clean only on production builds
+    clean: process.env.NODE_ENV === 'production',
+  },
   collections: {
     codes,
     comparisons,
@@ -300,12 +319,11 @@ export default defineConfig({
     decisions,
     dashboardIcons,
   },
-  // Optional but recommended: strip drafts before writing output
   prepare: (data) => {
-    data.comparisons = data.comparisons.filter(a => !a.draft)
-    data.deepCodes = data.deepCodes.filter(a => !a.draft)
-    data.deepProducts = data.deepProducts.filter(a => !a.draft)
-    data.troubleshooting = data.troubleshooting.filter(a => !a.draft)
-    data.decisions = data.decisions.filter(a => !a.draft)
+    data.comparisons = data.comparisons.filter((a) => !a.draft)
+    data.deepCodes = data.deepCodes.filter((a) => !a.draft)
+    data.deepProducts = data.deepProducts.filter((a) => !a.draft)
+    data.troubleshooting = data.troubleshooting.filter((a) => !a.draft)
+    data.decisions = data.decisions.filter((a) => !a.draft)
   },
 })

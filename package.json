@@ -4,9 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "content": "velite build --clean",
+    "content:watch": "velite --watch",
+    "codes:split": "node lib/scripts/split-codes.mjs",
+    "codes:verify": "node lib/scripts/verify-codes.js",
     "generate:icons": "node lib/scripts/generate-icons.mjs",
-    "dev": "npm run generate:icons && velite build && next dev",
-    "build": "npm run generate:icons && velite build && next build",
+    "predev": "node lib/scripts/generate-icons.mjs",
+    "dev": "next dev",
+    "prebuild": "node lib/scripts/generate-icons.mjs",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
