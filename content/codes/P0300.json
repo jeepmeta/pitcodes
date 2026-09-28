@@ -16,13 +16,8 @@
   "commonVehicles": ["Honda Accord", "Toyota Corolla", "Ford Escape", "Chevy Equinox", "Jeep Grand Cherokee"],
   "relatedCodes": ["P0301", "P0302", "P0303", "P0304", "P0171"],
   "relatedDashLights": ["check-engine"],
-  "faq": [
-    {"question": "Is a flashing check engine light with P0300 serious?", "answer": "Yes. It usually means active misfire that can overheat and destroy the catalytic converter. Ease off and diagnose promptly."},
-    {"question": "Can bad gas cause P0300?", "answer": "Contaminated or very low fuel can contribute, but plugs, coils, and vacuum leaks are more common first checks."}
-  ],
-  "affiliateProducts": [
-    {"name": "Spark plugs (vehicle-specific)", "url": "", "blurb": "Common first fix when coils and plugs are due."}
-  ],
+  "faq": [{"question": "Is a flashing check engine light with P0300 serious?", "answer": "Yes. It usually means active misfire that can overheat and destroy the catalytic converter. Ease off and diagnose promptly."}, {"question": "Can bad gas cause P0300?", "answer": "Contaminated or very low fuel can contribute, but plugs, coils, and vacuum leaks are more common first checks."}],
+  "affiliateProducts": [{"name": "Spark plugs (vehicle-specific)", "url": "", "blurb": "Common first fix when coils and plugs are due."}],
   "keywords": ["P0300", "random misfire", "multiple cylinder misfire"],
   "robots": "index, follow",
   "lastReviewed": "2026-09-28"

@@ -16,10 +16,7 @@
   "commonVehicles": ["Toyota Tacoma", "Ford Focus", "Subaru Outback", "BMW 3 Series", "Chevrolet Malibu"],
   "relatedCodes": ["P0174", "P0300", "P0101", "P0131"],
   "relatedDashLights": ["check-engine"],
-  "faq": [
-    {"question": "What fuel trim numbers confirm P0171?", "answer": "Long-term fuel trim often above about +10% to +15% at the condition where the code set supports a lean condition."},
-    {"question": "Why do P0171 and P0174 appear together?", "answer": "Both banks lean usually points to a shared issue: large vacuum leak, MAF, or fuel delivery—not a single bank sensor."}
-  ],
+  "faq": [{"question": "What fuel trim numbers confirm P0171?", "answer": "Long-term fuel trim often above about +10% to +15% at the condition where the code set supports a lean condition."}, {"question": "Why do P0171 and P0174 appear together?", "answer": "Both banks lean usually points to a shared issue: large vacuum leak, MAF, or fuel delivery—not a single bank sensor."}],
   "affiliateProducts": [{"name": "MAF sensor cleaner", "url": "", "blurb": "Safe first step when MAF contamination is suspected."}],
   "keywords": ["P0171", "system too lean", "bank 1 lean"],
   "robots": "index, follow",

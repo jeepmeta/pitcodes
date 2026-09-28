@@ -16,14 +16,8 @@
   "commonVehicles": ["Toyota Camry", "Honda Civic", "Ford F-150", "Chevrolet Silverado", "Nissan Altima"],
   "relatedCodes": ["P0430", "P0171", "P0300", "P0135", "P0141"],
   "relatedDashLights": ["check-engine"],
-  "faq": [
-    {"question": "Can I drive with a P0420 code?", "answer": "Usually yes for short trips if the engine runs smoothly. A failing cat or untreated misfire can worsen damage and emissions."},
-    {"question": "Does P0420 always mean a new catalytic converter?", "answer": "No. Exhaust leaks and oxygen sensors cause many P0420 cases. Confirm efficiency with sensor data before replacing the cat."},
-    {"question": "Will P0420 fail an emissions test?", "answer": "Often yes if the monitor is complete and the code is stored, or if readiness monitors are not set."}
-  ],
-  "affiliateProducts": [
-    {"name": "OBD-II scanner with live data", "url": "", "blurb": "Graph O2 sensors before buying a catalytic converter."}
-  ],
+  "faq": [{"question": "Can I drive with a P0420 code?", "answer": "Usually yes for short trips if the engine runs smoothly. A failing cat or untreated misfire can worsen damage and emissions."}, {"question": "Does P0420 always mean a new catalytic converter?", "answer": "No. Exhaust leaks and oxygen sensors cause many P0420 cases. Confirm efficiency with sensor data before replacing the cat."}, {"question": "Will P0420 fail an emissions test?", "answer": "Often yes if the monitor is complete and the code is stored, or if readiness monitors are not set."}],
+  "affiliateProducts": [{"name": "OBD-II scanner with live data", "url": "", "blurb": "Graph O2 sensors before buying a catalytic converter."}],
   "keywords": ["P0420", "catalyst efficiency", "catalytic converter code", "bank 1"],
   "robots": "index, follow",
   "lastReviewed": "2026-09-28"
