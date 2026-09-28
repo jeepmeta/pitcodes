@@ -2,8 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getDashboardIcon, getDashboardIcons } from '@/lib/content'
 import { AdSlot } from '@/components/monetization/AdSlot'
+import { AffiliateCallout } from '@/components/monetization/AffiliateCallout'
+import { GlowIcon } from '@/components/dash-lights/GlowIcon'
+import { JsonLd, techArticleLd, faqPageLd } from '@/lib/seo/json-ld'
 
 type Props = { params: Promise<{ slug: string }> }
+
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://pit.codes'
 
 const severityClass: Record<string, string> = {
   critical: 'bg-red-500/15 text-red-400',
@@ -29,9 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${icon.name} Dashboard Warning Light`,
     description: icon.definition.slice(0, 160),
-    alternates: {
-      canonical: icon.canonical ?? `/dash-lights/${icon.id}`,
-    },
+    keywords: icon.keywords,
+    alternates: { canonical: icon.canonical ?? `/dash-lights/${icon.id}` },
   }
 }
 
@@ -50,10 +54,20 @@ export default async function DashLightDetailPage({ params }: Props) {
     )
   }
 
-  const src = svgSrc(icon.svg)
+  const url = `${SITE}/dash-lights/${icon.id}`
+  const ld = [
+    techArticleLd({
+      title: `${icon.name} Dashboard Warning Light`,
+      description: icon.definition,
+      url,
+    }),
+  ]
+  const faqLd = icon.faq?.length ? faqPageLd(url, icon.faq) : null
+  if (faqLd) ld.push(faqLd)
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
+      <JsonLd data={ld} />
       <nav className="mb-6 text-sm text-zinc-500">
         <Link href="/dash-lights" className="hover:text-zinc-300">
           ← Dash lights
@@ -61,15 +75,14 @@ export default async function DashLightDetailPage({ params }: Props) {
       </nav>
 
       <header className="flex flex-col gap-4 sm:flex-row sm:items-start">
-        <div
-          className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border border-zinc-800 bg-black"
-          role="img"
-          aria-label={`${icon.name} dashboard warning light`}
-        >
-          {src ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={src} alt="" width={56} height={56} className="h-14 w-14" />
-          ) : null}
+        <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border border-zinc-800 bg-black">
+          <GlowIcon
+            src={svgSrc(icon.svg)}
+            color={icon.color}
+            name={icon.name}
+            size={64}
+            glow={icon.glow !== false}
+          />
         </div>
         <div>
           <div className="mb-2 flex flex-wrap gap-2">
@@ -87,6 +100,18 @@ export default async function DashLightDetailPage({ params }: Props) {
           </div>
           <h1 className="text-2xl font-bold tracking-tight">{icon.name}</h1>
           <p className="mt-2 text-zinc-400 leading-relaxed">{icon.definition}</p>
+          {icon.urgencyNote ? (
+            <p
+              className={`mt-3 rounded-lg border px-3 py-2 text-sm ${
+                icon.stopDriving
+                  ? 'border-red-500/40 bg-red-500/10 text-red-300'
+                  : 'border-zinc-700 bg-zinc-900 text-zinc-300'
+              }`}
+            >
+              {icon.stopDriving ? 'Stop driving: ' : ''}
+              {icon.urgencyNote}
+            </p>
+          ) : null}
         </div>
       </header>
 
@@ -133,18 +158,25 @@ export default async function DashLightDetailPage({ params }: Props) {
         </section>
       ) : null}
 
-      {icon.relatedProducts.length > 0 ? (
-        <section className="mt-6">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
-            Related parts & tools
-          </h2>
-          <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-zinc-300">
-            {icon.relatedProducts.map((p) => (
-              <li key={p}>{p}</li>
+      {icon.faq && icon.faq.length > 0 ? (
+        <section className="mt-8">
+          <h2 className="text-lg font-semibold">FAQ</h2>
+          <dl className="mt-3 space-y-4">
+            {icon.faq.map((f) => (
+              <div key={f.question} className="rounded-xl border border-zinc-800 p-4">
+                <dt className="font-medium text-zinc-100">{f.question}</dt>
+                <dd className="mt-1 text-sm leading-relaxed text-zinc-400">{f.answer}</dd>
+              </div>
             ))}
-          </ul>
+          </dl>
         </section>
       ) : null}
+
+      {icon.affiliateProducts
+        ?.filter((p) => p.url)
+        .map((p) => (
+          <AffiliateCallout key={p.name} title={p.name} href={p.url} blurb={p.blurb} />
+        ))}
 
       <AdSlot slotId="dash-after-content" placement="after-content" />
     </div>
