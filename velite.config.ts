@@ -1,32 +1,61 @@
 import { defineCollection, defineConfig, s } from 'velite'
 
 // ─────────────────────────────────────────────
-// Shared SEO + E-E-A-T helpers
+// Shared primitives (SEO + pipeline)
 // ─────────────────────────────────────────────
 
 const seoFields = {
   title: s.string().min(10).max(70),
   description: s.string().min(50).max(160),
+  /** Primary ranking phrase; used in H1 alignment and internal tooling */
+  focusKeyword: s.string().max(80).optional(),
   keywords: s.array(s.string()).default([]),
   robots: s.string().default('index, follow'),
+  /** Optional override for Open Graph title (defaults to title in app) */
+  ogTitle: s.string().max(70).optional(),
 }
 
 const eeatFields = {
   publishedAt: s.isodate(),
   updatedAt: s.isodate().optional(),
+  /** ISO date of last human/ASE-style review */
+  lastReviewed: s.isodate().optional(),
   author: s.string().default('PIT.CODES Automotive Team'),
   reviewer: s.string().default('ASE Certified Master Technician'),
 }
 
-/** Official OBD-II code shape: P|C|B|U + 4 digits */
+/** FAQ items → FAQPage JSON-LD */
+const faqItem = s.object({
+  question: s.string().min(10).max(160),
+  answer: s.string().min(20).max(500),
+})
+
+/** Tracked product CTA (Amazon-first) */
+const affiliateProduct = s.object({
+  name: s.string().min(2).max(80),
+  /** Full tracked URL; empty string allowed only when draft */
+  url: s.string().url().or(s.literal('')),
+  blurb: s.string().max(160).optional(),
+  asin: s.string().max(16).optional(),
+})
+
+/** Official OBD-II: P|C|B|U + 4 digits */
 const obdCode = s
   .string()
   .regex(/^[PCBU]\d{4}$/i, 'Invalid OBD-II code (expected P/C/B/U + 4 digits)')
 
-const articleSlug = s.slug('articles', ['admin', 'login', 'api', 'codes', 'dash-lights'])
+const articleSlug = s.slug('articles', [
+  'admin',
+  'login',
+  'api',
+  'codes',
+  'dash-lights',
+  'guides',
+  'reviews',
+])
 
 // ─────────────────────────────────────────────
-// 1. Core OBD-II codes (money pages)
+// 1. Diagnostic codes (money pages)
 // ─────────────────────────────────────────────
 const codes = defineCollection({
   name: 'DiagnosticCode',
@@ -36,10 +65,19 @@ const codes = defineCollection({
       code: obdCode,
       title: s.string().min(10).max(70),
       description: s.string().min(50).max(160),
+      focusKeyword: s.string().max(80).optional(),
       category: s.enum(['Powertrain', 'Body', 'Chassis', 'Network']),
       severity: s.enum(['low', 'medium', 'high', 'critical']),
+      /** 1 = highest SEO priority (top searched); omit = normal */
+      searchPriority: s.number().min(1).max(100).optional(),
+      /** Human-enriched vs pipeline defaults */
+      enriched: s.boolean().default(false),
+      /** Advise stopping / limping home */
+      stopDriving: s.boolean().default(false),
+      urgencyNote: s.string().max(200).optional(),
       symptoms: s.array(s.string()).min(1),
       causes: s.array(s.string()).min(1),
+      /** Ordered DIY / shop steps */
       solutions: s.array(s.string()).min(1),
       estimatedCost: s
         .object({
@@ -50,10 +88,15 @@ const codes = defineCollection({
         .optional(),
       commonVehicles: s.array(s.string()).default([]),
       relatedCodes: s.array(obdCode).default([]),
+      /** Dash light ids: check-engine, oil-pressure, … */
+      relatedDashLights: s.array(s.string()).default([]),
+      faq: s.array(faqItem).default([]),
+      affiliateProducts: s.array(affiliateProduct).default([]),
       keywords: s.array(s.string()).default([]),
       robots: s.string().default('index, follow'),
       cover: s.image().optional(),
       coverAlt: s.string().max(125).optional(),
+      lastReviewed: s.isodate().optional(),
     })
     .transform((data) => {
       const slug = data.code.toUpperCase()
@@ -64,12 +107,14 @@ const codes = defineCollection({
         permalink: `/codes/${slug}`,
         canonical: `/codes/${slug}`,
         schemaType: 'TechArticle' as const,
+        /** Ready for FAQPage when faq.length > 0 */
+        hasFaq: data.faq.length > 0,
       }
     }),
 })
 
 // ─────────────────────────────────────────────
-// 2–6. MDX article collections
+// 2–6. MDX articles
 // ─────────────────────────────────────────────
 const comparisons = defineCollection({
   name: 'ComparisonArticle',
@@ -97,6 +142,7 @@ const comparisons = defineCollection({
           summary: s.string().max(200),
         })
         .optional(),
+      faq: s.array(faqItem).default([]),
       toc: s.toc(),
       excerpt: s.excerpt({ length: 160 }),
       body: s.mdx(),
@@ -107,6 +153,7 @@ const comparisons = defineCollection({
       permalink: `/guides/${data.slug}`,
       canonical: `/guides/${data.slug}`,
       schemaType: 'Article' as const,
+      hasFaq: data.faq.length > 0,
     })),
 })
 
@@ -131,6 +178,9 @@ const deepCodes = defineCollection({
         'Professional',
       ]),
       estimatedRepairTime: s.string(),
+      relatedDashLights: s.array(s.string()).default([]),
+      faq: s.array(faqItem).default([]),
+      affiliateProducts: s.array(affiliateProduct).default([]),
       toc: s.toc(),
       excerpt: s.excerpt({ length: 160 }),
       body: s.mdx(),
@@ -144,6 +194,7 @@ const deepCodes = defineCollection({
         permalink: `/codes/${code}/guide`,
         canonical: `/codes/${code}/guide`,
         schemaType: 'TechArticle' as const,
+        hasFaq: data.faq.length > 0,
       }
     }),
 })
@@ -168,6 +219,7 @@ const deepProducts = defineCollection({
       pros: s.array(s.string()).min(2),
       cons: s.array(s.string()).min(1),
       verdict: s.string().max(300),
+      faq: s.array(faqItem).default([]),
       toc: s.toc(),
       excerpt: s.excerpt({ length: 160 }),
       body: s.mdx(),
@@ -178,6 +230,7 @@ const deepProducts = defineCollection({
       permalink: `/reviews/${data.slug}`,
       canonical: `/reviews/${data.slug}`,
       schemaType: 'Product' as const,
+      hasFaq: data.faq.length > 0,
     })),
 })
 
@@ -202,6 +255,9 @@ const troubleshooting = defineCollection({
         })
       ),
       safetyWarnings: s.array(s.string()).default([]),
+      relatedCodes: s.array(obdCode).default([]),
+      relatedDashLights: s.array(s.string()).default([]),
+      faq: s.array(faqItem).default([]),
       toc: s.toc(),
       excerpt: s.excerpt({ length: 160 }),
       body: s.mdx(),
@@ -212,6 +268,7 @@ const troubleshooting = defineCollection({
       permalink: `/guides/${data.slug}`,
       canonical: `/guides/${data.slug}`,
       schemaType: 'HowTo' as const,
+      hasFaq: data.faq.length > 0,
     })),
 })
 
@@ -230,6 +287,7 @@ const decisions = defineCollection({
       quickVerdict: s.string().min(40).max(280),
       keyTakeaways: s.array(s.string()).min(3).max(7),
       estimatedSavings: s.string().optional(),
+      faq: s.array(faqItem).default([]),
       toc: s.toc(),
       excerpt: s.excerpt({ length: 160 }),
       body: s.mdx(),
@@ -240,11 +298,12 @@ const decisions = defineCollection({
       permalink: `/guides/${data.slug}`,
       canonical: `/guides/${data.slug}`,
       schemaType: 'Article' as const,
+      hasFaq: data.faq.length > 0,
     })),
 })
 
 // ─────────────────────────────────────────────
-// Dashboard icons
+// Dashboard icons (visual lookup)
 // ─────────────────────────────────────────────
 const dashboardIcons = defineCollection({
   name: 'DashboardIcon',
@@ -282,13 +341,22 @@ const dashboardIcons = defineCollection({
         'system',
         'electrical',
       ]),
-      definition: s.string().min(1),
+      definition: s.string().min(20).max(400),
       causes: s.array(s.string()).min(1),
       solutions: s.array(s.string()).min(1),
+      stopDriving: s.boolean().default(false),
+      urgencyNote: s.string().max(200).optional(),
       relatedProducts: s.array(s.string()).default([]),
       relatedObdCodes: s.array(obdCode).default([]),
-      // Relative to the JSON file → content/dashboard-icons/svg/…
+      faq: s.array(faqItem).default([]),
+      affiliateProducts: s.array(affiliateProduct).default([]),
+      focusKeyword: s.string().max(80).optional(),
+      keywords: s.array(s.string()).default([]),
+      searchPriority: s.number().min(1).max(100).optional(),
+      /** Relative to JSON → content/dashboard-icons/svg/{id}.svg */
       svg: s.file({ allowNonRelativePath: false }),
+      /** Prefer currentColor SVGs for glow via CSS */
+      glow: s.boolean().default(true),
     })
     .transform((data) => ({
       ...data,
@@ -296,18 +364,17 @@ const dashboardIcons = defineCollection({
       permalink: `/dash-lights/${data.id}`,
       canonical: `/dash-lights/${data.id}`,
       schemaType: 'TechArticle' as const,
+      hasFaq: data.faq.length > 0,
     })),
 })
 
 export default defineConfig({
   root: 'content',
-  // Fail CI on schema drift when generating for production
   strict: process.env.NODE_ENV === 'production',
   output: {
     data: '.velite',
     assets: 'public/static',
     base: '/static/',
-    // Keep prior assets when watching; clean only on production builds
     clean: process.env.NODE_ENV === 'production',
   },
   collections: {
@@ -325,5 +392,18 @@ export default defineConfig({
     data.deepProducts = data.deepProducts.filter((a) => !a.draft)
     data.troubleshooting = data.troubleshooting.filter((a) => !a.draft)
     data.decisions = data.decisions.filter((a) => !a.draft)
+    // Surface priority codes first for any consumer of the array
+    data.codes = [...data.codes].sort((a, b) => {
+      const pa = a.searchPriority ?? 999
+      const pb = b.searchPriority ?? 999
+      if (pa !== pb) return pa - pb
+      return a.code.localeCompare(b.code)
+    })
+    data.dashboardIcons = [...data.dashboardIcons].sort((a, b) => {
+      const pa = a.searchPriority ?? 999
+      const pb = b.searchPriority ?? 999
+      if (pa !== pb) return pa - pb
+      return a.name.localeCompare(b.name)
+    })
   },
 })
