@@ -1,26 +1,27 @@
 {
   "code": "P0171",
-  "title": "P0171 – Fuel Trim Malfunction (Bank 1)",
-  "description": "Fuel Trim Malfunction (Bank 1) Diagnostic trouble code P0171. Confirm with a scan tool and vehicle-specific service data.",
+  "title": "P0171 – System Too Lean (Bank 1)",
+  "description": "Bank 1 is running lean: too much air or not enough fuel. Confirm with fuel trims, then check vacuum leaks, MAF, and fuel delivery.",
+  "focusKeyword": "P0171 lean code",
   "category": "Powertrain",
   "severity": "medium",
-  "symptoms": [
-    "Check engine light or stored DTC present",
-    "Driveability or system warning may accompany this code"
+  "searchPriority": 3,
+  "enriched": true,
+  "stopDriving": false,
+  "urgencyNote": "Driveability may worsen; prolonged lean operation can stress valves and cats.",
+  "symptoms": ["Check engine light", "Hesitation or surge", "Rough idle", "Higher than normal long-term fuel trims"],
+  "causes": ["Vacuum or intake leak", "Dirty or failing MAF sensor", "Weak fuel pump or clogged filter", "Faulty oxygen sensor readings", "PCV or hose leaks"],
+  "solutions": ["Read STFT/LTFT at idle and 2500 RPM", "Smoke-test intake and vacuum lines", "Clean/inspect MAF; check airbox for unmetered air", "Verify fuel pressure against spec", "Address any concurrent misfire codes first"],
+  "estimatedCost": {"min": 50, "max": 400, "currency": "USD"},
+  "commonVehicles": ["Toyota Tacoma", "Ford Focus", "Subaru Outback", "BMW 3 Series", "Chevrolet Malibu"],
+  "relatedCodes": ["P0174", "P0300", "P0101", "P0131"],
+  "relatedDashLights": ["check-engine"],
+  "faq": [
+    {"question": "What fuel trim numbers confirm P0171?", "answer": "Long-term fuel trim often above about +10% to +15% at the condition where the code set supports a lean condition."},
+    {"question": "Why do P0171 and P0174 appear together?", "answer": "Both banks lean usually points to a shared issue: large vacuum leak, MAF, or fuel delivery—not a single bank sensor."}
   ],
-  "causes": [
-    "Component or circuit fault related to this monitor",
-    "Wiring, connector, or control module issue"
-  ],
-  "solutions": [
-    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
-    "Inspect related components and wiring before replacing parts",
-    "Clear codes only after repair and confirm monitors complete"
-  ],
-  "keywords": [
-    "P0171",
-    "fuel trim malfunction (bank 1)"
-  ],
-  "relatedCodes": [],
-  "commonVehicles": []
+  "affiliateProducts": [{"name": "MAF sensor cleaner", "url": "", "blurb": "Safe first step when MAF contamination is suspected."}],
+  "keywords": ["P0171", "system too lean", "bank 1 lean"],
+  "robots": "index, follow",
+  "lastReviewed": "2026-09-28"
 }

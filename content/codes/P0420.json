@@ -1,26 +1,30 @@
 {
   "code": "P0420",
-  "title": "P0420 – Secondary Air Injection System Relay \"B\" Circuit Malfunction",
-  "description": "Secondary Air Injection System Relay \"B\" Circuit Malfunction",
+  "title": "P0420 – Catalyst System Efficiency Below Threshold (Bank 1)",
+  "description": "Bank 1 catalytic converter efficiency is below the threshold monitored by the downstream oxygen sensor. Often exhaust leak, aging cat, or O2 sensor issues.",
+  "focusKeyword": "P0420 code",
   "category": "Powertrain",
   "severity": "medium",
-  "symptoms": [
-    "Check engine light or stored DTC present",
-    "Driveability or system warning may accompany this code"
+  "searchPriority": 1,
+  "enriched": true,
+  "stopDriving": false,
+  "urgencyNote": "Usually safe to drive short distances; fix before emissions test or long trips.",
+  "symptoms": ["Check engine light on", "Failed emissions / readiness issues", "Possible sulfur smell", "Slightly reduced fuel economy"],
+  "causes": ["Worn or contaminated catalytic converter", "Exhaust leak before downstream O2 sensor", "Failing upstream or downstream oxygen sensor", "Engine running rich or misfiring (damages cat)", "Software or fuel trim related efficiency false flag"],
+  "solutions": ["Scan for companion codes (misfire, fuel trim, O2)", "Inspect exhaust for leaks ahead of the downstream sensor", "Graph upstream vs downstream O2: downstream should be relatively steady", "Repair misfires and rich/lean conditions before replacing the cat", "Replace catalytic converter only after confirming sensors and exhaust integrity"],
+  "estimatedCost": {"min": 100, "max": 2500, "currency": "USD"},
+  "commonVehicles": ["Toyota Camry", "Honda Civic", "Ford F-150", "Chevrolet Silverado", "Nissan Altima"],
+  "relatedCodes": ["P0430", "P0171", "P0300", "P0135", "P0141"],
+  "relatedDashLights": ["check-engine"],
+  "faq": [
+    {"question": "Can I drive with a P0420 code?", "answer": "Usually yes for short trips if the engine runs smoothly. A failing cat or untreated misfire can worsen damage and emissions."},
+    {"question": "Does P0420 always mean a new catalytic converter?", "answer": "No. Exhaust leaks and oxygen sensors cause many P0420 cases. Confirm efficiency with sensor data before replacing the cat."},
+    {"question": "Will P0420 fail an emissions test?", "answer": "Often yes if the monitor is complete and the code is stored, or if readiness monitors are not set."}
   ],
-  "causes": [
-    "Component or circuit fault related to this monitor",
-    "Wiring, connector, or control module issue"
+  "affiliateProducts": [
+    {"name": "OBD-II scanner with live data", "url": "", "blurb": "Graph O2 sensors before buying a catalytic converter."}
   ],
-  "solutions": [
-    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
-    "Inspect related components and wiring before replacing parts",
-    "Clear codes only after repair and confirm monitors complete"
-  ],
-  "keywords": [
-    "P0420",
-    "secondary air injection system relay \"b\""
-  ],
-  "relatedCodes": [],
-  "commonVehicles": []
+  "keywords": ["P0420", "catalyst efficiency", "catalytic converter code", "bank 1"],
+  "robots": "index, follow",
+  "lastReviewed": "2026-09-28"
 }

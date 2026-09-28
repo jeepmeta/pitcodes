@@ -1,26 +1,29 @@
 {
   "code": "P0300",
-  "title": "P0300 – Cylinder 12 Contribution/Range Fault",
-  "description": "Cylinder 12 Contribution/Range Fault Diagnostic trouble code P0300. Confirm with a scan tool and vehicle-specific service data.",
+  "title": "P0300 – Random/Multiple Cylinder Misfire Detected",
+  "description": "The PCM detected random or multiple cylinder misfires. A flashing check engine light means catalytic converter damage risk—reduce load immediately.",
+  "focusKeyword": "P0300 misfire",
   "category": "Powertrain",
-  "severity": "medium",
-  "symptoms": [
-    "Check engine light or stored DTC present",
-    "Driveability or system warning may accompany this code"
+  "severity": "critical",
+  "searchPriority": 2,
+  "enriched": true,
+  "stopDriving": true,
+  "urgencyNote": "If the light is flashing, stop hard acceleration and diagnose soon to protect the catalytic converter.",
+  "symptoms": ["Rough idle", "Loss of power", "Vibration under load", "Flashing or steady check engine light", "Fuel smell or poor MPG"],
+  "causes": ["Worn spark plugs or ignition coils", "Fuel injector issues", "Vacuum or intake leaks", "Low fuel pressure", "Compression or mechanical problems"],
+  "solutions": ["Note freeze-frame RPM/load when misfire set", "Check for companion P0301–P0308 cylinder codes", "Inspect plugs, coils, and plug wires; swap coils to isolate", "Smoke-test for vacuum leaks; verify fuel pressure", "Compression/leak-down if ignition and fuel check out"],
+  "estimatedCost": {"min": 80, "max": 600, "currency": "USD"},
+  "commonVehicles": ["Honda Accord", "Toyota Corolla", "Ford Escape", "Chevy Equinox", "Jeep Grand Cherokee"],
+  "relatedCodes": ["P0301", "P0302", "P0303", "P0304", "P0171"],
+  "relatedDashLights": ["check-engine"],
+  "faq": [
+    {"question": "Is a flashing check engine light with P0300 serious?", "answer": "Yes. It usually means active misfire that can overheat and destroy the catalytic converter. Ease off and diagnose promptly."},
+    {"question": "Can bad gas cause P0300?", "answer": "Contaminated or very low fuel can contribute, but plugs, coils, and vacuum leaks are more common first checks."}
   ],
-  "causes": [
-    "Component or circuit fault related to this monitor",
-    "Wiring, connector, or control module issue"
+  "affiliateProducts": [
+    {"name": "Spark plugs (vehicle-specific)", "url": "", "blurb": "Common first fix when coils and plugs are due."}
   ],
-  "solutions": [
-    "Verify the code with a quality OBD-II scanner and note freeze-frame data",
-    "Inspect related components and wiring before replacing parts",
-    "Clear codes only after repair and confirm monitors complete"
-  ],
-  "keywords": [
-    "P0300",
-    "cylinder 12 contribution/range fault"
-  ],
-  "relatedCodes": [],
-  "commonVehicles": []
+  "keywords": ["P0300", "random misfire", "multiple cylinder misfire"],
+  "robots": "index, follow",
+  "lastReviewed": "2026-09-28"
 }
