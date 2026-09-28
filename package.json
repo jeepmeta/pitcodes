@@ -7,6 +7,7 @@
     "content": "velite build --clean",
     "content:watch": "velite --watch",
     "codes:split": "node lib/scripts/split-codes.mjs",
+    "codes:seed-top20": "node lib/scripts/seed-top20.mjs",
     "codes:verify": "node lib/scripts/verify-codes.js",
     "generate:icons": "node lib/scripts/generate-icons.mjs",
     "predev": "node lib/scripts/generate-icons.mjs",
