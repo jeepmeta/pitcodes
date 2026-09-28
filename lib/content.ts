@@ -1,7 +1,15 @@
 /**
  * Safe accessors for Velite output (`.velite`).
- * Empty arrays when content is not built yet so routes still boot.
  */
+
+export type FaqItem = { question: string; answer: string }
+
+export type AffiliateProduct = {
+  name: string
+  url: string
+  blurb?: string
+  asin?: string
+}
 
 export type DashboardIcon = {
   id: string
@@ -17,10 +25,16 @@ export type DashboardIcon = {
   solutions: string[]
   relatedProducts: string[]
   relatedObdCodes: string[]
-  /** Public URL after Velite `s.file()` (e.g. /static/…) */
+  faq?: FaqItem[]
+  affiliateProducts?: AffiliateProduct[]
+  stopDriving?: boolean
+  urgencyNote?: string
+  searchPriority?: number
+  glow?: boolean
   svg?: string
   permalink?: string
   canonical?: string
+  hasFaq?: boolean
 }
 
 export type DiagnosticCode = {
@@ -28,17 +42,27 @@ export type DiagnosticCode = {
   slug: string
   title: string
   description: string
+  focusKeyword?: string
   category: string
   severity: 'low' | 'medium' | 'high' | 'critical'
+  searchPriority?: number
+  enriched?: boolean
+  stopDriving?: boolean
+  urgencyNote?: string
   symptoms: string[]
   causes: string[]
   solutions: string[]
   estimatedCost?: { min: number; max: number; currency: string }
   commonVehicles?: string[]
   relatedCodes?: string[]
+  relatedDashLights?: string[]
+  faq?: FaqItem[]
+  affiliateProducts?: AffiliateProduct[]
   keywords?: string[]
   permalink?: string
   canonical?: string
+  hasFaq?: boolean
+  lastReviewed?: string
 }
 
 type SiteModule = {

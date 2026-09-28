@@ -1,45 +1,50 @@
 {
   "id": "check-engine",
   "name": "Check Engine",
-  "aliases": [
-    "malfunction-indicator-lamp",
-    "mil",
-    "service-engine-soon"
-  ],
+  "aliases": ["malfunction-indicator-lamp", "mil", "service-engine-soon"],
   "vehicleSpecific": false,
   "color": "amber",
   "severity": "warning",
   "category": "engine",
-  "definition": "Indicates a fault detected by the engine control module (ECM/PCM). May be emissions-related or a serious engine problem.",
+  "definition": "Indicates a fault detected by the engine control module (ECM/PCM). May be emissions-related or a serious engine problem. Read codes before clearing.",
   "causes": [
     "Faulty oxygen sensor",
-    "Loose/damaged gas cap",
-    "Catalytic converter failure",
+    "Loose or damaged gas cap",
+    "Catalytic converter efficiency issue",
     "Mass airflow sensor issue",
-    "Spark plug/ignition coil failure",
+    "Spark plug or ignition coil failure",
     "Vacuum leak"
   ],
   "solutions": [
-    "Read OBD-II codes with a scanner",
-    "Tighten or replace gas cap",
-    "Replace faulty sensors",
-    "Address ignition/fuel system faults",
-    "Seek professional diagnosis if persistent"
+    "Read OBD-II codes with a scanner and note freeze-frame",
+    "Tighten or replace the gas cap if EVAP codes present",
+    "Address ignition, fuel, and sensor faults from the code list",
+    "Do not clear codes until the repair is verified"
   ],
-  "relatedProducts": [
-    "OBD-II scanner",
-    "Oxygen sensor",
-    "Gas cap",
-    "Spark plugs",
-    "MAF sensor cleaner"
+  "stopDriving": false,
+  "urgencyNote": "Flashing light = reduce load and diagnose soon (misfire risk to catalytic converter).",
+  "relatedProducts": ["OBD-II scanner", "Oxygen sensor", "Gas cap", "Spark plugs"],
+  "relatedObdCodes": ["P0300", "P0171", "P0420", "P0135", "P0401", "P0128"],
+  "faq": [
+    {
+      "question": "Can I drive with the check engine light on?",
+      "answer": "Often yes if the light is steady and the car runs normally. A flashing light means active misfire risk—ease off and diagnose promptly."
+    },
+    {
+      "question": "Should I clear the light without fixing anything?",
+      "answer": "No. Capture the code first. Clearing alone does not repair the fault and can reset emissions readiness."
+    }
   ],
-  "relatedObdCodes": [
-    "P0300",
-    "P0171",
-    "P0420",
-    "P0135",
-    "P0401",
-    "P0128"
+  "affiliateProducts": [
+    {
+      "name": "OBD-II scanner",
+      "url": "",
+      "blurb": "Read and save codes before clearing the light."
+    }
   ],
+  "focusKeyword": "check engine light",
+  "keywords": ["check engine light", "MIL", "service engine soon"],
+  "searchPriority": 1,
+  "glow": true,
   "svg": "svg/check-engine.svg"
 }

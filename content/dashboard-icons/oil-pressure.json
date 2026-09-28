@@ -1,40 +1,47 @@
 {
   "id": "oil-pressure",
   "name": "Oil Pressure",
-  "aliases": [
-    "low-oil-pressure",
-    "oil-can"
-  ],
+  "aliases": ["low-oil-pressure", "oil-can"],
   "vehicleSpecific": false,
   "color": "red",
   "severity": "critical",
   "category": "engine",
-  "definition": "Engine oil pressure is critically low. Immediate stop required to prevent catastrophic engine damage.",
+  "definition": "Engine oil pressure is critically low. Continued running can destroy bearings and the engine. Stop safely and check oil level before restarting.",
   "causes": [
     "Low oil level",
-    "Faulty oil pump",
-    "Clogged oil filter",
+    "Wrong oil viscosity",
+    "Failing oil pump",
+    "Clogged pickup or filter",
     "Worn engine bearings",
-    "Oil pressure sensor failure"
+    "Faulty oil pressure sensor or wiring"
   ],
   "solutions": [
-    "Stop engine immediately",
-    "Check oil level",
-    "Do not drive until resolved",
-    "Have oil pressure tested",
-    "Possible oil pump or bearing repair"
+    "Stop the engine as soon as it is safe",
+    "Check dipstick and top up to the correct level if low",
+    "Do not keep driving if the light stays on after a correct fill",
+    "Have oil pressure tested mechanically if the light returns",
+    "Address pump, filter, or bearing faults before further operation"
   ],
-  "relatedProducts": [
-    "Engine oil",
-    "Oil filter",
-    "Oil pressure sensor",
-    "Oil pump"
+  "stopDriving": true,
+  "urgencyNote": "Stop driving. Low oil pressure can cause rapid catastrophic engine damage.",
+  "relatedProducts": ["Engine oil", "Oil filter", "Oil pressure sensor"],
+  "relatedObdCodes": ["P0520", "P0521", "P0522", "P0523"],
+  "faq": [
+    {
+      "question": "Can I drive with the oil pressure light on?",
+      "answer": "No. Shut the engine off when safe. Check oil level. If the light stays on with correct level, have the vehicle towed."
+    }
   ],
-  "relatedObdCodes": [
-    "P0520",
-    "P0521",
-    "P0522",
-    "P0523"
+  "affiliateProducts": [
+    {
+      "name": "Correct viscosity engine oil",
+      "url": "",
+      "blurb": "Only after confirming level and spec—never ignore a red oil light."
+    }
   ],
+  "focusKeyword": "oil pressure light",
+  "keywords": ["oil pressure light", "oil can light", "low oil pressure"],
+  "searchPriority": 2,
+  "glow": true,
   "svg": "svg/oil-pressure.svg"
 }
